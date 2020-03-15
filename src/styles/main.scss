@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('./reset.scss');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+  position: relative;
 }
+
 h2 {
   color: #000;
+}
+
+.app {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
 }

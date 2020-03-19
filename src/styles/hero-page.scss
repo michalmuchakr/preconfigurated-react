@@ -1,8 +1,7 @@
+@import "defaults";
+
 .hero-page {
     .hero-page__list {
-        max-height: calc(100vh - 200px);
-        overflow: auto;
-
         .hero-page__list__item {
             padding: 10px;
             border: 1px solid #ccc;

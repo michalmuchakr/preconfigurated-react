@@ -27,10 +27,15 @@ module.exports = {
       }
     }, {
       test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        fallback: "style-loader",
-        use: "css-loader!sass-loader"
-      })
+      use: [
+        // Creates `style` nodes from JS strings
+        'style-loader',
+        // Translates CSS into CommonJS
+        'css-loader',
+        // Compiles Sass to CSS
+        'sass-loader',
+      ],
+
     }]
   },
   devServer: {

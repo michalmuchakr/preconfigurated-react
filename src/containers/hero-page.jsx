@@ -13,7 +13,7 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <div className="hero-page">
+    <div className="hero-page page">
       <h1>Hero page</h1>
       <ul className="hero-page__list">
         {heroses.map(hero => (

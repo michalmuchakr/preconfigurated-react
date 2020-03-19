@@ -1,5 +1,8 @@
+@import "defaults";
+
 .nav {
-  background-color: #292B2E;
+  grid-area: nav;
+  background-color: $bg-v-dark;
   padding: 10px;
   border-bottom: 5px solid #BB7C3E;
 

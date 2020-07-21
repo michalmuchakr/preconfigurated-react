@@ -1,4 +1,4 @@
-<h1>React | webpack 4, Babel 7</h2>
+<h1>Preconfigurated React</h2>
 <h2>Welcome to React pre congigurated environment.</h2>
 
 <h3>
@@ -33,7 +33,7 @@
 <code>
   npm build
 </code>
-
+<br />
 <p>
   Functionalities included:
 </p>

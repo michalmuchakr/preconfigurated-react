@@ -19,13 +19,9 @@ module.exports = {
       styles: path.resolve(__dirname, "./src/styles"),
     },
   },
-  node: {
-    fs: "empty",
-  },
   stats: "errors-only",
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
         use: {

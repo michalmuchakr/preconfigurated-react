@@ -22,7 +22,6 @@
     "node-sass": "4.14.1",
     "sass-loader": "9.0.2",
     "style-loader": "1.2.1",
-    "webpack": "5.0.0-beta.22",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0"
   },
@@ -31,6 +30,12 @@
     "file-system": "2.2.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-router-dom": "5.2.0"
-  }
+    "react-router-dom": "5.2.0",
+    "webpack": "^4.44.1"
+  },
+  "browserslist": [
+    "defaults",
+    "IE 11",
+    "maintained node versions"
+  ]
 }

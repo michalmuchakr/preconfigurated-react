@@ -1,9 +1,6 @@
-<h1>Preconfigurated React</h2>
-<h2>Welcome to React pre congigurated environment.</h2>
+<h2>Welcome to pre congigurated ReactJS boilerplate.</h2>
 
-<a href="https://david-dm.org/michalmuchakr/preconfigurated-react" title="dependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/status.svg"/></a>
-
-<a href="https://david-dm.org/michalmuchakr/preconfigurated-react?type=dev" title="devDependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/dev-status.svg"/></a>
+<a href="https://david-dm.org/michalmuchakr/preconfigurated-react" title="dependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/status.svg"/></a> <a href="https://david-dm.org/michalmuchakr/preconfigurated-react?type=dev" title="devDependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/dev-status.svg"/></a>
 
 <h3>
   Before application could be started run:
@@ -38,6 +35,7 @@
   npm build
 </code>
 <br />
+
 <p>
   Functionalities included:
 </p>
@@ -54,5 +52,11 @@
   </li>
   <li>
     Absolute paths import.
+  </li>
+  <li>
+    FLUX Architecture
+  </li>
+  <li>
+    Async mock API call
   </li>
 </ul>

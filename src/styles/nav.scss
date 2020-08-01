@@ -8,12 +8,20 @@
   background-color: $bg-v-dark;
   border-bottom: 5px solid #BB7C3E;
 
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 25px auto;
+  }
+
   .nav__list {
     grid-area: navList;
     display: flex;
     align-items: center;
     list-style-type: none;
-    padding-left: 37px;
+    padding: 0 20px 0 37px;
+
+    @media only screen and (max-width: 1024px) {
+      padding-left: 0;
+    }
 
     .nav__list-item {
       display: flex;

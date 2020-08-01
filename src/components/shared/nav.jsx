@@ -4,8 +4,9 @@ import "styles/nav.scss";
 
 import { useAppStateContext } from "app-context.jsx";
 
-function Nav() {
+const Nav = () => {
   const { userAuthenticated } = useAppStateContext();
+
   return (
     <nav className="nav">
       <ul className="nav__list">
@@ -22,11 +23,11 @@ function Nav() {
         <li className="nav__list-item">
           <NavLink
             exact
-            to="/hero-page"
+            to="/example-page"
             className="nav__list-item__link"
             activeClassName="nav__list-item__link-active"
           >
-            Hero Page
+            Example Page
           </NavLink>
         </li>
         <li className="nav__list-item nav__list-item-right">
@@ -42,6 +43,6 @@ function Nav() {
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;

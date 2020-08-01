@@ -1,11 +1,14 @@
 import React, { createContext, useContext, useReducer, useMemo } from "react";
-import appInitialState from "./reducers/app-reducer";
+import { appInitialState, appReducer } from "./reducers/app-reducer";
 
-import { appReducer } from "./reducers/app-reducer";
+const AppStateContext = createContext(null);
+const AppDispatchContext = createContext(null);
 
-const AppStateContext = createContext();
-const AppDispatchContext = createContext();
-
+/**
+ * Context Providers
+ * @function AppContext
+ * @param { node } children
+ *  */
 const AppContext = ({ children }) => {
   const [appState, appDispatch] = useReducer(appReducer, appInitialState);
 
@@ -21,22 +24,22 @@ const AppContext = ({ children }) => {
 };
 
 function useAppStateContext() {
-  const context = useContext(AppStateContext);
-  if (context === undefined) {
+  const appContext = useContext(AppStateContext);
+  if (appContext === undefined) {
     throw new Error("useAppStateContext must be used within a CountProvider");
   }
-  return context;
+  return appContext;
 }
 
-function useAppDispatchContexth() {
-  const context = useContext(AppDispatchContext);
-  if (context === undefined) {
+function useAppDispatchContext() {
+  const appDispatch = useContext(AppDispatchContext);
+  if (appDispatch === undefined) {
     throw new Error(
-      "useAppDispatchContexth must be used within a CountProvider"
+      "useAppDispatchContext must be used within a CountProvider"
     );
   }
-  return context;
+  return appDispatch;
 }
 
-export { useAppStateContext, useAppDispatchContexth };
+export { useAppStateContext, useAppDispatchContext };
 export default AppContext;

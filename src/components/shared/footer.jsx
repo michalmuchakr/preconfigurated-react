@@ -4,7 +4,9 @@ import "styles/footer.scss";
 function Footer() {
   return (
     <footer className="footer">
-      <p>Some footer txt</p>
+      <div className="footer-box">
+        <p>Some footer txt</p>
+      </div>
     </footer>
   );
 }

@@ -1,14 +1,14 @@
 {
-  "name": "react-config",
+  "name": "preconfigurated-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to React pre congigurated environment.",
   "main": "index.jsx",
   "scripts": {
     "start": "webpack-dev-server --hot --mode development --open",
     "build": "webpack --mode production"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Michal Mucha",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.10.4",
     "@babel/core": "7.10.4",

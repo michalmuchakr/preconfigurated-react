@@ -1,7 +1,29 @@
 import axios from "axios";
-import "mock-api/routes/users";
+import reducers from "reducers/app-reducer";
+import {
+    setLoading
+} from "./common";
+import "mock-api/routes/heros";
 
-export const fetchHeros = async appDsiapatch => {
+const saveHeroses = (heroData) => ({
+    type: reducers.SET_HEROSES,
+    heroData
+});
+
+const fetchHeros = async () => {
     let res = await axios.get("/api/heroes");
     return res.data;
+}
+
+const getHeroses = async (appDispatch) => {
+    appDispatch(setLoading(true, "heroList"));
+
+    const heroData = await fetchHeros();
+    appDispatch(saveHeroses(heroData));
+
+    appDispatch(setLoading(false, null));
+}
+
+export {
+    getHeroses
 }

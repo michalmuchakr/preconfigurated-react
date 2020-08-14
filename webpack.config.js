@@ -2,8 +2,9 @@ const HtmlWebPlugin = require("html-webpack-plugin"),
   path = require("path");
 
 const htmlPlugin = new HtmlWebPlugin({
-  template: "./src/index.html",
   filename: "./index.html",
+  favicon: "src/assets/img/favicon.ico",
+  template: "./public/index.html"
 });
 
 module.exports = {
@@ -11,13 +12,14 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve("dist"),
-    publicPath: "/",
+    publicPath: "/"
   },
   resolve: {
     modules: [path.resolve(__dirname, "./src"), "node_modules"],
     alias: {
-      styles: path.resolve(__dirname, "./src/styles"),
+      styles: path.resolve(__dirname, "./src/styles")
     },
+    extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
   stats: "errors-only",
   module: {
@@ -25,8 +27,8 @@ module.exports = {
         test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-        },
+          loader: "babel-loader"
+        }
       },
       {
         test: /\.scss$/,
@@ -36,14 +38,21 @@ module.exports = {
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
-          "sass-loader",
-        ],
+          "sass-loader"
+        ]
       },
-    ],
+      {
+        test: /\.(jpe?g|png|gif|ico)$/i,
+        use: [{
+          loader: "file-loader"
+        }]
+      }
+    ]
   },
   devServer: {
     historyApiFallback: true,
     port: 1234,
+    hot: true
   },
-  plugins: [htmlPlugin],
+  plugins: [htmlPlugin]
 };

@@ -4,13 +4,14 @@
   "description": "Welcome to React pre congigurated environment.",
   "main": "index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --hot --mode development --open",
-    "build": "webpack --mode production",
+    "build": "npm run clean && webpack --config webpack.config.prod.js",
+    "clean": "shx rm -rf ./dist",
+    "start": "webpack-dev-server --config webpack.config.dev.js",
     "test": "jest",
     "test:coverage": "jest --collect-coverage",
     "test:watch": "jest --watchAll"
   },
-  "author": "Michal Mucha",
+  "author": "Michal Mucha | General Cube",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.10.4",
@@ -33,7 +34,10 @@
     "prettier": "2.0.5",
     "react-test-renderer": "16.13.1",
     "sass-loader": "9.0.2",
+    "shx": "^0.3.2",
     "style-loader": "1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-assets-manifest": "^3.1.1",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0"
   },
@@ -41,9 +45,8 @@
     "axios": "0.19.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-router-dom": "5.2.0",
-    "webpack": "^4.44.1"
+    "react-helmet": "6.1.0",
+    "react-router-dom": "5.2.0"
   },
   "browserslist": [
     "defaults",

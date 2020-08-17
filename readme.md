@@ -34,6 +34,9 @@
 <code>
   npm build
 </code>
+
+<br />
+<br />
 <br />
 
 <p>
@@ -42,7 +45,7 @@
 
 <ul>
   <li>
-    React JS.
+    React JS
   </li>
   <li>
     Hot reload development server.
@@ -51,12 +54,12 @@
     SCSS preprocesor included.
   </li>
   <li>
-    Absolute paths import.
+    Absolute paths import
   </li>
   <li>
     FLUX Architecture
   </li>
   <li>
-    Async mock API call
+    Mock API
   </li>
 </ul>

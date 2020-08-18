@@ -6,13 +6,18 @@
   "scripts": {
     "build": "npm run clean && webpack --config webpack.config.prod.js",
     "clean": "shx rm -rf ./dist",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "start:dev": "webpack-dev-server --config webpack.config.dev.js",
+    "start": "node express-static.js",
     "test": "jest",
     "test:coverage": "jest --collect-coverage",
     "test:watch": "jest --watchAll"
   },
   "author": "Michal Mucha | General Cube",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michalmuchakr/preconfigurated-react"
+  },
   "devDependencies": {
     "@babel/cli": "7.10.4",
     "@babel/core": "7.10.4",
@@ -43,6 +48,7 @@
   },
   "dependencies": {
     "axios": "0.19.2",
+    "express": "^4.17.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",

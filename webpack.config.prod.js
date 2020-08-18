@@ -9,31 +9,14 @@ const htmlPlugin = new HtmlWebPlugin({
 });
 
 const webAssetManifest = new WebpackAssetsManifest({
-    output: path.join(__dirname, "dist/aset-manifest.json"),
-    transform(assets, manifest) {
-        return {
-            files: assets
-        };
-    }
-    // generate(seed, files, entrypoints) {
-    //     return files.reduce((
-    //         manifest, {
-    //             name,
-    //             path
-    //         }) => ({
-    //         ...manifest,
-    //         [name]: path
-    //     }), seed)
-    // }
+    output: path.join(__dirname, "dist/aset-manifest.json")
 });
 
 module.exports = {
     entry: "./src/index.jsx",
     output: {
-        filename: "static/[name]-[hash].js",
-        chunkFilename: "static/[name]-[id]-[chunkhash].js",
-        path: path.join(__dirname, "dist"),
-        publicPath: "/"
+        filename: "[name]-[hash].js",
+        chunkFilename: "[name]-[id]-[chunkhash].js",
     },
     optimization: {
         splitChunks: {
@@ -58,11 +41,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
+                use: ["style-loader", "css-loader", "sass-loader"]
             },
             {
                 test: /\.(jpe?g|png|gif|ico)$/i,

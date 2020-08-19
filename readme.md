@@ -2,7 +2,14 @@
 
 <a href="https://david-dm.org/michalmuchakr/preconfigurated-react" title="dependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/status.svg"/></a> <a href="https://david-dm.org/michalmuchakr/preconfigurated-react?type=dev" title="devDependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/dev-status.svg"/></a>
 
-<h3>
+<h4>
+  Please see app live: 
+  <a href="https://preconfigurated-react.herokuapp.com/">
+    preconfigurated-react on herokuapp
+  </a>
+</h3>
+
+<h4>
   Before application could be started run:
 </h3>
 

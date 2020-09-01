@@ -23,7 +23,7 @@
 </h3>
 
 <code>
-  npm start
+  npm start:dev
 </code>
 
 <h3>
@@ -68,5 +68,8 @@
   </li>
   <li>
     Mock API
+  </li>
+  <li>
+    React Helmet
   </li>
 </ul>

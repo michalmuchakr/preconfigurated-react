@@ -1,6 +1,6 @@
 {
   "name": "preconfigurated-react",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Welcome to React pre congigurated environment.",
   "main": "index.jsx",
   "scripts": {

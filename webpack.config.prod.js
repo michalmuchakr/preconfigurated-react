@@ -9,7 +9,7 @@ const htmlPlugin = new HtmlWebPlugin({
 });
 
 const webAssetManifest = new WebpackAssetsManifest({
-    output: path.join(__dirname, "dist/aset-manifest.json")
+    output: path.join(__dirname, "dist/asset-manifest.json")
 });
 
 module.exports = {

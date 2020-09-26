@@ -72,4 +72,10 @@
   <li>
     React Helmet
   </li>
+  <li>
+    Prettier
+  </li>
+  <li>
+    esLint
+  </li>
 </ul>

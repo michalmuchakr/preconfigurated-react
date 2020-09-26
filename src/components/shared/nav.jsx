@@ -1,11 +1,11 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "styles/nav.scss";
+import React from 'react';
+import {NavLink} from 'react-router-dom';
+import 'styles/nav.scss';
 
-import { useAppStateContext } from "app-context.jsx";
+import {useAppStateContext} from 'app-context.jsx';
 
 const Nav = () => {
-  const { userAuthenticated } = useAppStateContext();
+  const {userAuthenticated} = useAppStateContext();
 
   return (
     <nav className="nav">
@@ -37,7 +37,7 @@ const Nav = () => {
             className="nav__list-item__link"
             activeClassName="nav__list-item__link-active"
           >
-            {userAuthenticated ? "Hello User!" : "Not authenticated user!"}
+            {userAuthenticated ? 'Hello User!' : 'Not authenticated user!'}
           </NavLink>
         </li>
       </ul>

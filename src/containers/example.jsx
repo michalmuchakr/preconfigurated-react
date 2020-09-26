@@ -10,7 +10,7 @@ const Example = () => {
 
   useEffect(() => {
     getHeroses(appDispatch);
-  }, []);
+  }, [appDispatch]);
 
   return (
     <>

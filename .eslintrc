@@ -1,9 +1,10 @@
 {
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "webpack.config.js"
-      }
+    "extends": "react-app",
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.prod.js"
+            }
+        }
     }
-  }
 }

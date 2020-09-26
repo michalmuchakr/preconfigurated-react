@@ -7,20 +7,24 @@ import Home from "./containers/home.jsx";
 import Example from "./containers/example.jsx";
 
 export default class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className="app">
-          <Nav />
-          <div className="container">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/example-page" component={Example} />
-            </Switch>
-          </div>
-          <Footer />
-        </div>
-      </Router>
-    );
-  }
+    render() {
+        return (
+            <Router>
+                <div className="app">
+                    <Nav />
+                    <div className="container">
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route
+                                exact
+                                path="/example-page"
+                                component={Example}
+                            />
+                        </Switch>
+                    </div>
+                    <Footer />
+                </div>
+            </Router>
+        );
+    }
 }

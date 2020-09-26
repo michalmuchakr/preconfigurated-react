@@ -1,6 +1,11 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import {Helmet} from 'react-helmet';
 
+/**
+ * Home Page component
+ * @module container/home
+ * @return {node} <Home />
+ */
 function Home() {
   return (
     <>

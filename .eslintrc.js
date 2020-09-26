@@ -1,27 +1,30 @@
-export default {
-    env: {
-        browser: true,
-        es2021: true
+module.exports = {
+    "env": {
+        "browser": true,
+        "es6": true
     },
-    extends: [
-        "eslint:recommended",
+    "extends": [
         "plugin:react/recommended",
-        "plugin:react-hooks/recommended"
+        "google"
     ],
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true
-        },
-        ecmaVersion: 12,
-        sourceType: "module"
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
     },
-    plugins: ["react", "react-hooks"],
-    rules: {
-        indent: ["error", 2],
-        "linebreak-style": ["error", "unix"],
-        quotes: ["error", "double"],
-        semi: ["error", "always"],
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {},
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 };

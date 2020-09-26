@@ -1,10 +1,15 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
-import { getHeroses } from "actions/heros";
-import { useAppDispatchContext } from "app-context.jsx";
-import HeroList from "components/example/hero-list.jsx";
-import "styles/hero-page.scss";
+import React, {useEffect} from 'react';
+import {Helmet} from 'react-helmet';
+import {getHeroses} from 'actions/heros';
+import {useAppDispatchContext} from 'app-context.jsx';
+import HeroList from 'components/example/hero-list.jsx';
+import 'styles/hero-page.scss';
 
+/**
+ * Example Page component
+ * @module container/example
+ * @return {node} <Example />
+ */
 const Example = () => {
   const appDispatch = useAppDispatchContext();
 

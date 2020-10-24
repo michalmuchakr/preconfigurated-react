@@ -7,11 +7,11 @@
   <a href="https://preconfigurated-react.herokuapp.com/">
     preconfigurated-react on herokuapp
   </a>
-</h3>
+</h4>
 
 <h4>
   Before application could be started run:
-</h3>
+</h4>
 
 <code>
   $ npm i

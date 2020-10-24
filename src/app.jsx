@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import Nav from "./components/shared/nav.jsx";
-import Footer from "./components/shared/footer.jsx";
-import Home from "./containers/home.jsx";
-import Example from "./containers/example.jsx";
+import Nav from './components/shared/nav.jsx';
+import Footer from './components/shared/footer.jsx';
+import Home from './containers/home.jsx';
+import Example from './containers/example.jsx';
 
 export default class App extends Component {
   render() {

@@ -35,7 +35,7 @@ function useAppDispatchContext() {
   const appDispatch = useContext(AppDispatchContext);
   if (appDispatch === undefined) {
     throw new Error(
-      'useAppDispatchContext must be used within a CountProvider',
+        'useAppDispatchContext must be used within a CountProvider',
     );
   }
   return appDispatch;

@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebPlugin({
 
 const webAssetManifest = new WebpackAssetsManifest({
   output: path.join(__dirname, 'dist/aset-manifest.json'),
-  transform(assets, manifest) {
+  transform(assets) {
     return {
       files: assets,
     };
@@ -20,7 +20,7 @@ const webAssetManifest = new WebpackAssetsManifest({
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: '[name]-[hash].js',
+    filename: '[name]-[chunkHash].js',
     chunkFilename: '[id]-[chunkhash].js',
     path: path.join(__dirname, 'dist'),
     publicPath: '/',

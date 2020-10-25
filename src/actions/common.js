@@ -6,6 +6,4 @@ const setLoading = (isLoading, laodingID) => ({
   laodingID,
 });
 
-export {
-  setLoading,
-};
+export {setLoading};

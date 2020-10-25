@@ -7,7 +7,7 @@ const mock = new MockAdapter(axios, {
   delayResponse: 1000,
 });
 
-mock.onGet('/api/heroes').reply(() => ([
+mock.onGet('/api/heroes').reply(() => [
   // status
   200,
   // body
@@ -16,4 +16,4 @@ mock.onGet('/api/heroes').reply(() => ([
   {
     'Content-Type': 'application/json',
   },
-]));
+]);

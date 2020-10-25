@@ -1,8 +1,6 @@
 import axios from 'axios';
 import reducers from 'reducers/app-reducer';
-import {
-  setLoading,
-} from './common';
+import {setLoading} from './common';
 import 'mock-api/routes/heros';
 
 const saveHeroses = (heroData) => ({
@@ -24,6 +22,4 @@ const getHeroses = async (appDispatch) => {
   appDispatch(setLoading(false, null));
 };
 
-export {
-  getHeroses,
-};
+export {getHeroses};

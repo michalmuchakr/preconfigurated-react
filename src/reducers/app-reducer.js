@@ -1,14 +1,9 @@
-const SET_HEROSES = (state, {
-  heroData,
-}) => ({
+const SET_HEROSES = (state, {heroData}) => ({
   ...state,
   heroData,
 });
 
-const SET_LOADING = (state, {
-  isLoading,
-  laodingID,
-}) => ({
+const SET_LOADING = (state, {isLoading, laodingID}) => ({
   ...state,
   isLoading,
   laodingID,

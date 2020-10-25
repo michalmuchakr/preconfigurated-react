@@ -6,8 +6,8 @@ import AppContext from './app-context.jsx';
 import 'styles/main.scss';
 
 ReactDOM.render(
-    <AppContext>
-      <App />
-    </AppContext>,
-    document.getElementById('root'),
+  <AppContext>
+    <App />
+  </AppContext>,
+  document.getElementById('root'),
 );

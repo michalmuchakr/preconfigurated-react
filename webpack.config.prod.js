@@ -32,23 +32,26 @@ module.exports = {
   },
   stats: 'errors-only',
   module: {
-    rules: [{
-      test: /\.js$|\.jsx$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
+    rules: [
+      {
+        test: /\.js$|\.jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
-    },
-    {
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-    },
-    {
-      test: /\.(jpe?g|png|gif|ico)$/i,
-      use: [{
-        loader: 'file-loader',
-      }],
-    },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(jpe?g|png|gif|ico)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [htmlPlugin, webAssetManifest],

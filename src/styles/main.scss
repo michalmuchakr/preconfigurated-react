@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import "./reset.scss";
-@import "defaults";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import './reset.scss';
+@import 'defaults';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   position: relative;
 }
 
@@ -27,9 +27,9 @@ h2 {
   grid-template-rows: [top] 56px [row1-end] auto [third-line] 30px [bottom];
   align-items: stretch;
   grid-template-areas:
-    "nav nav"
-    ". container"
-    "footer footer";
+    'nav nav'
+    '. container'
+    'footer footer';
   background: $bg-light;
 
   @media only screen and (max-width: 1024px) {
@@ -42,7 +42,7 @@ h2 {
   grid-area: container;
   padding-left: 40px;
   display: grid;
-  grid-template-areas: "page side";
+  grid-template-areas: 'page side';
   grid-template-columns: [container_left] auto [container_center] 250px [container_right];
 
   @media only screen and (max-width: 1024px) {

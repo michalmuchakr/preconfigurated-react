@@ -1,30 +1,30 @@
-@import "defaults";
+@import 'defaults';
 
 .footer {
-    display: grid;
-    grid-template-columns: 250px auto;
-    grid-template-areas: ". footerBox";
-    font-size: 12px;
-    color: #fff;
-    background: $bg-v-dark;
-    line-height: 30px;
-    padding-left: 16px;
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-areas: '. footerBox';
+  font-size: 12px;
+  color: #fff;
+  background: $bg-v-dark;
+  line-height: 30px;
+  padding-left: 16px;
+
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 25px auto;
+    padding-left: 0;
+  }
+
+  .footer-box {
+    grid-area: footerBox;
+    padding-left: 24px;
 
     @media only screen and (max-width: 1024px) {
-        grid-template-columns: 25px auto;
-        padding-left: 0;
+      padding-left: 0;
     }
 
-    .footer-box {
-        grid-area: footerBox;
-        padding-left: 24px;
-
-        @media only screen and (max-width: 1024px) {
-            padding-left: 0;
-        }
-
-        p {
-            margin: 0;
-        }
+    p {
+      margin: 0;
     }
+  }
 }

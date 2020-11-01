@@ -61,6 +61,9 @@
     SCSS preprocesor included.
   </li>
   <li>
+    import fonts form file.
+  </li>
+  <li>
     Absolute paths import
   </li>
   <li>

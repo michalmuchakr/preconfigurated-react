@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import './reset.scss';
 @import 'defaults';
+@import 'fonts';
 
 * {
   box-sizing: border-box;
@@ -11,7 +12,9 @@ body {
   position: relative;
 }
 
-h2 {
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: 'Ubuntu Condensed', sans-serif;
   color: #000;
 }
 

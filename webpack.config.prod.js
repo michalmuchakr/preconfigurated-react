@@ -27,6 +27,7 @@ module.exports = {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
     alias: {
       styles: path.resolve(__dirname, './src/styles'),
+      fonts: path.resolve(__dirname, './src/assets/fonts'),
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
@@ -42,7 +43,22 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          'resolve-url-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|svg)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+          },
+        },
       },
       {
         test: /\.(jpe?g|png|gif|ico)$/i,

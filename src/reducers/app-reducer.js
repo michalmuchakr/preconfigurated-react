@@ -1,19 +1,19 @@
-const SET_HEROSES = (state, {heroData}) => ({
+const SET_HEROES = (state, {heroData}) => ({
   ...state,
   heroData,
 });
 
-const SET_LOADING = (state, {isLoading, laodingID}) => ({
+const SET_LOADING = (state, {isLoading, loadingID}) => ({
   ...state,
   isLoading,
-  laodingID,
+  loadingID,
 });
 
 export const appInitialState = {
   heroData: [],
   authToken: null,
   isLoading: null,
-  laodingID: '',
+  loadingID: '',
   userAuthenticated: false,
 };
 
@@ -26,6 +26,6 @@ export const appReducer = (state, action) => {
 };
 
 export default {
-  SET_HEROSES,
+  SET_HEROES,
   SET_LOADING,
 };

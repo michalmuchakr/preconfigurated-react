@@ -1,9 +1,9 @@
 import reducers from 'reducers/app-reducer';
 
-const setLoading = (isLoading, laodingID) => ({
+const setLoading = (isLoading, loadingID) => ({
   type: reducers.SET_LOADING,
   isLoading,
-  laodingID,
+  loadingID,
 });
 
 export {setLoading};

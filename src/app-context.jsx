@@ -1,16 +1,25 @@
 import React, {createContext, useContext, useReducer, useMemo} from 'react';
 import {appInitialState, appReducer} from './reducers/app-reducer';
+import PropTypes from 'prop-types';
 
 const AppStateContext = createContext(null);
 const AppDispatchContext = createContext(null);
 
+const lazyInitState = () => {
+  return appInitialState;
+};
+
 /**
  * Context Providers
  * @function AppContext
- * @param { node } children
+ * @param {JSX.Element} children
  *  */
 const AppContext = ({children}) => {
-  const [appState, appDispatch] = useReducer(appReducer, appInitialState);
+  const [appState, appDispatch] = useReducer(
+    appReducer,
+    appInitialState,
+    lazyInitState,
+  );
 
   return (
     <AppStateContext.Provider value={useMemo(() => appState, [appState])}>
@@ -44,6 +53,10 @@ function useAppDispatchContext() {
   }
   return appDispatch;
 }
+
+AppContext.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export {useAppStateContext, useAppDispatchContext};
 export default AppContext;

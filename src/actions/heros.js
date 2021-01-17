@@ -8,6 +8,11 @@ const saveHeroes = (heroData) => ({
   heroData,
 });
 
+const setError = (error) => ({
+  type: reducers.SET_ERROR,
+  error,
+});
+
 const fetchHeroes = async () => {
   const res = await axios.get('/api/heroes');
   return res.data;
@@ -22,4 +27,4 @@ const getHeroes = async (appDispatch) => {
   appDispatch(setLoading(false, null));
 };
 
-export {getHeroes};
+export {getHeroes, setError};

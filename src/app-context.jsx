@@ -22,10 +22,8 @@ const AppContext = ({children}) => {
   );
 
   return (
-    <AppStateContext.Provider value={useMemo(() => appState, [appState])}>
-      <AppDispatchContext.Provider
-        value={useMemo(() => appDispatch, [appDispatch])}
-      >
+    <AppStateContext.Provider value={appState}>
+      <AppDispatchContext.Provider value={appDispatch}>
         {children}
       </AppDispatchContext.Provider>
     </AppStateContext.Provider>

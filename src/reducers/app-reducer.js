@@ -9,9 +9,15 @@ const SET_LOADING = (state, {isLoading, loadingID}) => ({
   loadingID,
 });
 
+const SET_ERROR = (state, {error}) => ({
+  ...state,
+  error,
+});
+
 export const appInitialState = {
-  heroData: [],
+  heroData: null,
   authToken: null,
+  error: null,
   isLoading: null,
   loadingID: '',
   userAuthenticated: false,
@@ -28,4 +34,5 @@ export const appReducer = (state, action) => {
 export default {
   SET_HEROES,
   SET_LOADING,
+  SET_ERROR
 };

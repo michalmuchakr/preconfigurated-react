@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {Helmet} from 'react-helmet';
-import {getHeroes} from 'actions/heros';
+import {getHeroes, setError} from 'actions/heros';
 import {useAppDispatchContext} from 'app-context.jsx';
 import HeroList from 'components/example/hero-list.jsx';
 import 'styles/hero-page.scss';
@@ -14,8 +14,8 @@ const Example = () => {
   const appDispatch = useAppDispatchContext();
 
   useEffect(() => {
-    getHeroes(appDispatch);
-  }, [appDispatch]);
+    getHeroes(appDispatch).catch((e) => setError(e));
+  }, []);
 
   return (
     <>

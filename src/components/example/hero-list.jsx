@@ -7,12 +7,13 @@ const HeroList = () => {
 
   return (
     <ul className="example-page__list">
-      {!heroData.length && isLoading && loadingID === 'heroList' && (
-        <span>loading...</span>
-      )}
       {heroData &&
-        heroData.map((hero) => (
-          <HeroItem key={`hero-${hero.id}`} hero={hero} />
+        !heroData.length &&
+        isLoading &&
+        loadingID === 'heroList' && <span>loading...</span>}
+      {heroData &&
+        heroData.map((hero, index) => (
+          <HeroItem key={`hero-${hero.id}`} hero={hero} index={index} />
         ))}
     </ul>
   );

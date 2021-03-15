@@ -34,5 +34,5 @@ export const appReducer = (state, action) => {
 export default {
   SET_HEROES,
   SET_LOADING,
-  SET_ERROR
+  SET_ERROR,
 };

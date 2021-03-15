@@ -18,7 +18,7 @@
     animation-fill-mode: both;
 }
 
-@for $i from 1 to 50 {
+@for $i from 1 to 25 {
     .animate:nth-child(#{$i}) {
         animation-delay: #{$i * 0.1}s;
     }

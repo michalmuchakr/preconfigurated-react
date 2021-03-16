@@ -4,6 +4,7 @@ build/
 dist/
 .idea/
 .git
+out/
 *.md
 .gitignore
 */*.iml

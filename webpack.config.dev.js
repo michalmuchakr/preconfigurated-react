@@ -90,6 +90,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     compress: true,
+    clientLogLevel: 'debug',
     historyApiFallback: true,
     open: true,
     port: 1234,

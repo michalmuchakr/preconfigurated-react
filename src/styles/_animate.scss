@@ -1,25 +1,25 @@
 @keyframes fadein {
-    0% {
-        top: 15px;
-        opacity: 0;
-    }
-    100% {
-        top: 0;
-        opacity: 1;
-    }
+  0% {
+    top: 15px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .animate {
-    opacity: 0;
-    position: relative;
-    -moz-animation: fadein 0.3s; /* Firefox */
-    -webkit-animation: fadein 0.3s; /* Safari and Chrome */
-    -o-animation: fadein 0.3s; /* Opera */
-    animation-fill-mode: both;
+  opacity: 0;
+  position: relative;
+  -moz-animation: fadein 0.3s; /* Firefox */
+  -webkit-animation: fadein 0.3s; /* Safari and Chrome */
+  -o-animation: fadein 0.3s; /* Opera */
+  animation-fill-mode: both;
 }
 
 @for $i from 1 to 25 {
-    .animate:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.1}s;
-    }
+  .animate:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.1}s;
+  }
 }

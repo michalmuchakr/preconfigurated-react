@@ -10,16 +10,15 @@ export const Button = ({primary, backgroundColor, size, label, ...props}) => {
     ? 'storybook-button--primary'
     : 'storybook-button--secondary';
   return (
-    <button
+    <input
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(
         ' ',
       )}
       style={backgroundColor && {backgroundColor}}
+      value={label}
       {...props}
-    >
-      {label}
-    </button>
+    />
   );
 };
 

@@ -7,12 +7,12 @@ import './button.css';
  */
 export const Button = ({primary, backgroundColor, size, label, ...props}) => {
   const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
+    ? 'common-button--primary'
+    : 'common-button--secondary';
   return (
     <input
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
+      className={['common-button', `common-button--${size}`, mode].join(
         ' ',
       )}
       style={backgroundColor && {backgroundColor}}

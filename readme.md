@@ -1,7 +1,7 @@
 <h2>Welcome to pre congigurated ReactJS boilerplate.</h2>
 
 <a href="https://david-dm.org/michalmuchakr/preconfigurated-react" title="dependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/status.svg"/></a> <a href="https://david-dm.org/michalmuchakr/preconfigurated-react?type=dev" title="devDependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/dev-status.svg"/></a>
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/50fdf5441c834ed2b30de2b818857ee5)](https://www.codacy.com/gh/michalmuchakr/preconfigurated-react/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=michalmuchakr/preconfigurated-react&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/50fdf5441c834ed2b30de2b818857ee5)](https://www.codacy.com/gh/michalmuchakr/preconfigurated-react/dashboard?utm_source=github.com&utm_medium=referral&utm_content=michalmuchakr/preconfigurated-react&utm_campaign=Badge_Grade)
 
 <h4>
   Please see app live: 

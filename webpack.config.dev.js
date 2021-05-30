@@ -54,14 +54,12 @@ module.exports = {
         test: /\.scss$/,
         use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          "style-loader",
           // Translates CSS into CommonJS
-          'css-loader',
-          // converts urls
-          'resolve-url-loader',
+          "css-loader",
           // Compiles Sass to CSS
-          'sass-loader',
-        ],
+          "sass-loader",
+        ]
       },
       {
         test: /\.(ttf|eot|woff|woff2|svg)$/i,
@@ -96,5 +94,5 @@ module.exports = {
     hot: true,
     watchContentBase: true,
   },
-  plugins: [htmlPlugin, webAssetManifest],
+  plugins: [htmlPlugin],
 };

@@ -1,5 +1,5 @@
 # 1. Node JS creates Client App artifact
-FROM node:14.15.4 as preconfigurated-react
+FROM node:12.19.0 as preconfigurated-react-build-deps
 
 # create and set work dir
 RUN mkdir /usr/src/preconfigurated-react

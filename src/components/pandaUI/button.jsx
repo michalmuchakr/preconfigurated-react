@@ -6,15 +6,11 @@ import './button.css';
  * Primary UI component for user interaction
  */
 export const Button = ({primary, backgroundColor, size, label, ...props}) => {
-  const mode = primary
-    ? 'common-button--primary'
-    : 'common-button--secondary';
+  const mode = primary ? 'common-button--primary' : 'common-button--secondary';
   return (
     <input
       type="button"
-      className={['common-button', `common-button--${size}`, mode].join(
-        ' ',
-      )}
+      className={['common-button', `common-button--${size}`, mode].join(' ')}
       style={backgroundColor && {backgroundColor}}
       value={label}
       {...props}

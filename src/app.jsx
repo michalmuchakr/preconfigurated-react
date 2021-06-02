@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Nav from './components/shared/nav.jsx';
 import Footer from './components/shared/footer.jsx';
 import Home from './containers/home.jsx';
-import Example from './containers/example.jsx';
+import HeroPage from './containers/hero-page.jsx';
 
 const App = () => (
   <Router>
@@ -13,7 +13,7 @@ const App = () => (
       <div className="container">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/example-page" component={Example} />
+          <Route exact path="/hero-page" component={HeroPage} />
         </Switch>
       </div>
       <Footer />

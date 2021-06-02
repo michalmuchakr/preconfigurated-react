@@ -10,7 +10,7 @@ import 'styles/hero-page.scss';
  * @module container/example
  * @return {JSX.Element} <Example />
  */
-const Example = () => {
+const HeroPage = () => {
   const appDispatch = useAppDispatchContext();
 
   useEffect(() => {
@@ -31,4 +31,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default HeroPage;

@@ -3,7 +3,7 @@ import {Helmet} from 'react-helmet';
 
 /**
  * Home Page component
- * @module container/home
+ * @module app-container/home
  * @return {JSX.Element} <Home />
  */
 const Home = () => (
@@ -13,7 +13,7 @@ const Home = () => (
       <meta name="description" content="Home Page" />
     </Helmet>
     <div className="home-page page">
-      <h1>Home page</h1>
+      <h1 className="mt-4 mb-3">Home page</h1>
     </div>
   </>
 );

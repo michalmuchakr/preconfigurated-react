@@ -2,11 +2,15 @@
   .example-page__list {
     .example-page__list__item {
       background: #fafafa;
-      padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
       margin-bottom: 5px;
       font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      .hero-name__input {
+        max-width: 250px;
+      }
     }
   }
 }

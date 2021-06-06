@@ -8,7 +8,7 @@ const Nav = () => {
   const {userAuthenticated} = useAppStateContext();
 
   return (
-    <nav className="nav">
+    <nav className="navigation">
       <ul className="nav__list">
         <li className="nav__list-item">
           <NavLink
@@ -23,7 +23,7 @@ const Nav = () => {
         <li className="nav__list-item">
           <NavLink
             exact
-            to="/example-page"
+            to="/hero-page"
             className="nav__list-item__link"
             activeClassName="nav__list-item__link-active"
           >

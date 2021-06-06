@@ -10,7 +10,7 @@ const App = () => (
   <Router>
     <div className="app">
       <Nav />
-      <div className="container">
+      <div className="app-container">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/hero-page" component={HeroPage} />

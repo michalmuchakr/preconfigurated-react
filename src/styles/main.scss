@@ -1,11 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import '~bootstrap/scss/bootstrap';
 @import './reset.scss';
 @import 'animate';
 @import 'defaults';
 @import 'fonts';
+@import 'forms';
 
 * {
   box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 body {
@@ -21,6 +43,7 @@ h5,
 h6 {
   font-family: 'Ubuntu Condensed', sans-serif;
   color: #000;
+  font-size: 34px;
 }
 
 .app {
@@ -36,7 +59,7 @@ h6 {
   align-items: stretch;
   grid-template-areas:
     'nav nav'
-    '. container'
+    '. app-container'
     'footer footer';
   background: $bg-light;
 
@@ -45,9 +68,9 @@ h6 {
   }
 }
 
-.container {
+.app-container {
   overflow: auto;
-  grid-area: container;
+  grid-area: app-container;
   padding-left: 40px;
   display: grid;
   grid-template-areas: 'page side';

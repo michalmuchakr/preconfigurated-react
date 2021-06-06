@@ -1,4 +1,4 @@
-<h2>Welcome to pre congigurated ReactJS boilerplate.</h2>
+# Welcome to pre congigurated ReactJS boilerplate.
 
 <a href="https://david-dm.org/michalmuchakr/preconfigurated-react" title="dependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/status.svg"/></a> <a href="https://david-dm.org/michalmuchakr/preconfigurated-react?type=dev" title="devDependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/dev-status.svg"/></a>
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/50fdf5441c834ed2b30de2b818857ee5)](https://www.codacy.com/gh/michalmuchakr/preconfigurated-react/dashboard?utm_source=github.com&utm_medium=referral&utm_content=michalmuchakr/preconfigurated-react&utm_campaign=Badge_Grade)
@@ -10,76 +10,47 @@
   </a>
 </h4>
 
-<h4>
-  Before application could be started run:
-</h4>
+## Installation 
 
-<code>
-  $ npm i
-</code>
-<br />
+To kick of application
 
-<h3>
-  In case of running appliation in development mode:
-</h3>
+```bash 
+    npm install
+    npm start:dev
+```
 
-<code>
-  npm start:dev
-</code>
+Then navigate to url using your favourite browser: 
 
-<h3>
-  Then navigate to: 
-</h3>
+```bash 
+    http://localhost:1234/
+```
 
-<code>
-  http://localhost:1234/
-</code>
+## To prepare production build run command:
+```bash 
+    npm build
+```
 
-<h3>
-  To prepare production build run command:
-</h3>
+## Tech Stack
 
-<code>
-  npm build
-</code>
+**Client:**
 
-<br />
-<br />
-<br />
+- JavaScript,
+- React,
+- SCSS,
+- ReactStrap,
+- React Helmet,
+- Huskey
+- Prettier, EsLint
 
-<p>
-  Functionalities included:
-</p>
+**Server:**
+- Node,
+- axios-mock-adapter
 
-<ul>
-  <li>
-    React JS
-  </li>
-  <li>
-    Hot reload development server.
-  </li>
-  <li>
-    SCSS preprocesor included.
-  </li>
-  <li>
-    import fonts form file.
-  </li>
-  <li>
-    Absolute paths import
-  </li>
-  <li>
-    FLUX Architecture
-  </li>
-  <li>
-    Mock API
-  </li>
-  <li>
-    React Helmet
-  </li>
-  <li>
-    Prettier
-  </li>
-  <li>
-    esLint
-  </li>
-</ul>
+  
+## Features
+- Routing using `react-router-dom`
+- Webpack  & babel configuration,
+- Custom FLUX architecture,
+- Hot reload development server,
+- Import fonts from a file,
+- Absolut path imports configuration

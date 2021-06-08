@@ -1,4 +1,4 @@
-# Welcome to pre congigurated ReactJS boilerplate.
+# Welcome to pre congigurated ReactJS boilerplate
 
 <a href="https://david-dm.org/michalmuchakr/preconfigurated-react" title="dependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/status.svg"/></a> <a href="https://david-dm.org/michalmuchakr/preconfigurated-react?type=dev" title="devDependencies status"><img src="https://david-dm.org/michalmuchakr/preconfigurated-react/dev-status.svg"/></a>
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/50fdf5441c834ed2b30de2b818857ee5)](https://www.codacy.com/gh/michalmuchakr/preconfigurated-react/dashboard?utm_source=github.com&utm_medium=referral&utm_content=michalmuchakr/preconfigurated-react&utm_campaign=Badge_Grade)
@@ -25,32 +25,30 @@ Then navigate to url using your favourite browser:
     http://localhost:1234/
 ```
 
-## To prepare production build run command:
+## Production build run command
 ```bash 
     npm build
 ```
 
 ## Tech Stack
-
 **Client:**
-
-- JavaScript,
-- React,
-- SCSS,
-- ReactStrap,
-- React Helmet,
-- Huskey
-- Prettier, EsLint
+-  JavaScript,
+-  React,
+-  SCSS,
+-  ReactStrap,
+-  React Helmet,
+-  Huskey
+-  Prettier, EsLint
 
 **Server:**
-- Node,
-- axios-mock-adapter
+-  Node,
+-  axios-mock-adapter
 
   
 ## Features
-- Routing using `react-router-dom`
-- Webpack  & babel configuration,
-- Custom FLUX architecture,
-- Hot reload development server,
-- Import fonts from a file,
-- Absolut path imports configuration
+-  Routing using `react-router-dom`
+-  Webpack  & babel configuration,
+-  Custom FLUX architecture,
+-  Hot reload development server,
+-  Import fonts from a file,
+-  Absolut path imports configuration

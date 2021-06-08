@@ -32,23 +32,28 @@ Then navigate to url using your favourite browser:
 
 ## Tech Stack
 **Client:**
--  JavaScript,
--  React,
--  SCSS,
--  ReactStrap,
--  React Helmet,
--  Huskey
--  Prettier, EsLint
+<ul>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>SCSS</li>
+    <li>ReactStrap</li>
+    <li>React Helmet</li>
+    <li>Huskey</li>
+    <li>Prettier EsLint</li>
+</ul>
 
 **Server:**
--  Node,
--  axios-mock-adapter
-
+<ul>
+    <li>Node</li>
+    <li>axios-mock-adapter</li>
+</ul>
   
 ## Features
--  Routing using `react-router-dom`
--  Webpack  & babel configuration,
--  Custom FLUX architecture,
--  Hot reload development server,
--  Import fonts from a file,
--  Absolut path imports configuration
+<ul>
+    <li>Routing using `react-router-dom`
+    <li>Webpack  & babel configuration,
+    <li>Custom FLUX architecture,
+    <li>Hot reload development server,
+    <li>Import fonts from a file,
+    <li>Absolut path imports configuration
+</ul>

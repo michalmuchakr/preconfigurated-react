@@ -10,28 +10,31 @@
   </a>
 </h4>
 
-## Installation 
+## Installation
 
 To kick of application
 
-```bash 
+```bash
     npm install
     npm start:dev
 ```
 
-Then navigate to url using your favourite browser: 
+Then navigate to url using your favourite browser:
 
-```bash 
+```bash
     http://localhost:1234/
 ```
 
 ## Production build run command
-```bash 
+
+```bash
     npm build
 ```
 
 ## Tech Stack
+
 **Client:**
+
 <ul>
     <li>JavaScript</li>
     <li>React</li>
@@ -43,6 +46,7 @@ Then navigate to url using your favourite browser:
 </ul>
 
 **Server:**
+
 <ul>
     <li>Node</li>
     <li>axios-mock-adapter</li>

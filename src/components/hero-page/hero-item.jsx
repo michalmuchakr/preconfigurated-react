@@ -9,6 +9,8 @@ import {
   Card,
   Input,
 } from 'reactstrap';
+import {Editor, EditorState} from 'draft-js';
+import 'draft-js/dist/Draft.css';
 
 const heroItem = ({hero, index}) => {
   const [heroFirstName, setHeroFirstName] = useState(hero.first_name);
@@ -16,22 +18,35 @@ const heroItem = ({hero, index}) => {
   const [isUnderEdition, setIsUnderEdition] = useState(false);
   const animateClassname = `example-page__list__item animate animate-delay__${index}`;
 
+  const [editorState, setEditorState] = React.useState(() =>
+    EditorState.createEmpty(),
+  );
+
   const editHeroName = (e) => {
+    e.stopPropagation();
     const {name, value} = e.target;
     setHeroFirstName(value);
   };
 
   const editHeroDescription = (e) => {
-    const {name, value} = e.target;
-    setHeroDescription(value);
+    e.stopPropagation();
+    setHeroDescription(e.target.value);
   };
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
+  const editHero = (e) => {
+    e.stopPropagation();
+    setIsUnderEdition(!isUnderEdition);
+  };
+
   return (
     <Card className={`${animateClassname} mb-2`}>
-      <CardHeader className="d-flex align-items-center justify-content-between">
+      <CardHeader
+        className="d-flex align-items-center justify-content-between"
+        onClick={toggle}
+      >
         {isUnderEdition ? (
           <Input
             className="hero-name__input"
@@ -45,11 +60,8 @@ const heroItem = ({hero, index}) => {
         )}
 
         <ButtonGroup size="sm">
-          <Button outline onClick={() => setIsUnderEdition(!isUnderEdition)}>
-            {isUnderEdition ? 'Save' : 'Edit'}
-          </Button>
-          <Button outline onClick={toggle}>
-            Toggle
+          <Button outline onClick={(e) => editHero(e)}>
+            {isUnderEdition ? 'save' : 'edit'}
           </Button>
         </ButtonGroup>
       </CardHeader>

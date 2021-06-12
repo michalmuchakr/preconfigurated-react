@@ -62,7 +62,7 @@
     "prettier": "2.3.0",
     "react-test-renderer": "17.0.2",
     "resolve-url-loader": "^4.0.0",
-    "sass-loader": "11.0.1",
+    "sass-loader": "10.2.0",
     "shx": "0.3.3",
     "style-loader": "2.0.0",
     "webpack": "5.31.2",
@@ -73,6 +73,7 @@
   "dependencies": {
     "axios": "0.21.1",
     "bootstrap": "^5.0.1",
+    "draft-js": "^0.11.7",
     "express": "4.17.1",
     "prop-types": "15.7.2",
     "react": "17.0.2",

@@ -1,19 +1,12 @@
-import TextEditor from 'components/shared/text-editor';
-import ThemeWrapper from '../shared/theme-wrapper';
 import React from 'react';
+import TextEditor from '../../components/shared/text-editor';
+import 'styles/main.scss';
 
 export default {
   title: 'Example/TextEditor',
   component: TextEditor,
-  decorators: [
-    (Story) => (
-      <ThemeWrapper>
-        <Story />
-      </ThemeWrapper>
-    ),
-  ],
 };
 
-const Template = (args) => <TextEditor {...args} />;
+const Template = () => <TextEditor />;
 
-export const Basic = Template.bind({});
+export const Primary = Template.bind({});

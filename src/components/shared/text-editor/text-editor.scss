@@ -1,7 +1,12 @@
-.DraftEditor-editorContainer {
+.DraftEditor {
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 5px;
   background: #fafafa;
-  font-size: 14px;
+
+  .DraftEditor-editorContainer {
+    border-top: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 }

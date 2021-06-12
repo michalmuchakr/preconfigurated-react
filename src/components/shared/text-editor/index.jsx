@@ -19,13 +19,13 @@ const TextEditor = () => {
     return 'not-handled';
   };
 
-  const boldHandler = () => {
-    setEditorState(RichUtils.toggleInlineStyle(editorState, 'BOLD'));
+  const fontStyleHandler = (style) => {
+    setEditorState(RichUtils.toggleInlineStyle(editorState, style));
   };
 
   return (
-    <>
-      <EditorHeader boldHandler={boldHandler} />
+    <div className="DraftEditor">
+      <EditorHeader fontStyleHandler={fontStyleHandler} />
       <Editor
         editorState={editorState}
         onChange={setEditorState}
@@ -38,7 +38,7 @@ const TextEditor = () => {
           history: {inDropdown: true},
         }}
       />
-    </>
+    </div>
   );
 };
 

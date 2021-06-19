@@ -4,6 +4,7 @@ build/
 dist/
 .idea/
 .git
+storybook-static/
 *.md
 .gitignore
 */*.iml

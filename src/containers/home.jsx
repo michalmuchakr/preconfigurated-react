@@ -16,7 +16,6 @@ const Home = () => (
     <div className="home-page page">
       <h1 className="mt-4 mb-3">Home page</h1>
     </div>
-    <TextEditor />
   </>
 );
 

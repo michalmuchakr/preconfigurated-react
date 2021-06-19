@@ -18,4 +18,7 @@ module.exports = {
     // Return the altered config
     return config;
   },
+  core: {
+    builder: "webpack5",
+  },
 };

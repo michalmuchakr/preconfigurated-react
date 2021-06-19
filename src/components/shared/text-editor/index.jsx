@@ -23,9 +23,16 @@ const TextEditor = () => {
     setEditorState(RichUtils.toggleInlineStyle(editorState, style));
   };
 
+  const handleToggleBlockType = (blockType) => {
+    setEditorState(RichUtils.toggleBlockType(editorState, blockType));
+  };
+
   return (
     <div className="DraftEditor">
-      <EditorHeader fontStyleHandler={fontStyleHandler} />
+      <EditorHeader
+        fontStyleHandler={fontStyleHandler}
+        handleToggleBlockType={handleToggleBlockType}
+      />
       <Editor
         editorState={editorState}
         onChange={setEditorState}

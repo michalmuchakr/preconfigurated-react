@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/footer.scss';
+import '../soft-bastion-ui/src/styles/footer.scss';
 
 const Footer = () => (
   <footer className="footer">

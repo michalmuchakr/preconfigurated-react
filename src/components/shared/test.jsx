@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/main.scss';
+import '../soft-bastion-ui/src/styles/main.scss';
 
 const Test = () => {
   return <div>hello</div>;

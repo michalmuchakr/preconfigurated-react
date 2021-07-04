@@ -1,8 +1,8 @@
 import React from 'react';
-import 'styles/main.scss';
+import '../soft-bastion-ui/src/styles/main.scss';
 
-const ThemeWrapper = (props) => {
-  return <div>{Zrops.children}</div>;
+const ThemeWrapper = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 export default ThemeWrapper;

@@ -1,6 +1,6 @@
 import React from 'react';
 import TextEditor from '../../components/shared/text-editor';
-import 'styles/main.scss';
+import '../soft-bastion-ui/src/styles/main.scss';
 
 export default {
   title: 'Example/TextEditor',

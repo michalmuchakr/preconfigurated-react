@@ -15,18 +15,18 @@ import {Helmet} from 'react-helmet';
  *  */
 
 type ContainerWrapperProps = {
-  children: JSX.Element,
-  pageTitle: string,
-  pageDescription: string,
-  pageName: string,
+  children: JSX.Element;
+  pageTitle: string;
+  pageDescription: string;
+  pageName: string;
 };
 
 const ContainerWrapper = ({
   children,
   pageTitle,
   pageDescription,
-  pageName
-} : ContainerWrapperProps ) => {
+  pageName,
+}: ContainerWrapperProps) => {
   return (
     <>
       <Helmet>
@@ -34,9 +34,7 @@ const ContainerWrapper = ({
         <meta name="description" content={pageDescription} />
       </Helmet>
 
-      <div className={`${pageName}__page page`}>
-        {children}
-      </div>
+      <div className={`${pageName}__page page`}>{children}</div>
     </>
   );
 };

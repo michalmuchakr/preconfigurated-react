@@ -12,9 +12,6 @@
     "strictNullChecks": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./setup/@types"
-    ]
+    "typeRoots": ["./node_modules/@types", "./setup/@types"]
   }
 }

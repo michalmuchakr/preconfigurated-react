@@ -54,6 +54,7 @@ Then navigate to url using your browser of your choise:
 </ul>
 
 ## Features
+
 <ul>
     <li>Routing using `react-router-dom`</li>
     <li>Webpack & babel configuration,</li>

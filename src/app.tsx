@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, {FunctionComponent} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import Nav from "./components/shared/nav.jsx";
-import Footer from "./components/shared/footer.jsx";
-import Home from "./containers/home";
-import HeroPage from "./containers/hero-page.jsx";
+import Nav from './components/shared/nav.jsx';
+import Footer from './components/shared/footer.jsx';
+import Home from './containers/home';
+import HeroPage from './containers/hero-page.jsx';
 
 const App: FunctionComponent = (): JSX.Element => (
   <Router>

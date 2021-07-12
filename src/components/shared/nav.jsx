@@ -1,6 +1,5 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import '../soft-bastion-ui/src/styles/nav.scss';
 
 import {useAppStateContext} from 'app-context.jsx';
 

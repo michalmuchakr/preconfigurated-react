@@ -1,6 +1,5 @@
 const HtmlWebPlugin = require('html-webpack-plugin');
 const path = require('path');
-const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 const htmlPlugin = new HtmlWebPlugin({
   filename: './index.html',
@@ -8,28 +7,15 @@ const htmlPlugin = new HtmlWebPlugin({
   template: './public/index.html',
 });
 
-const webAssetManifest = new WebpackAssetsManifest({
-  output: path.join(__dirname, 'dist/asset-manifest.json'),
-  transform(assets) {
-    return {
-      files: assets,
-    };
-  },
-});
-
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: '[name]-[chunkHash].js',
-    chunkFilename: '[id]-[chunkhash].js',
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
+    pathinfo: false,
   },
   optimization: {
-    splitChunks: {
-      chunks: 'all',
-      name: 'runtime-manifest',
-    },
+    runtimeChunk: true,
   },
   resolve: {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
@@ -51,6 +37,11 @@ module.exports = {
         },
       },
       {
+        test: /\.ts$|\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/i,
         loader: 'css-loader',
         options: {
@@ -59,20 +50,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           'style-loader',
           {
             loader: 'css-loader',
-            options: {
-              url: false,
-            },
           },
           'resolve-url-loader',
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
           },
         ],
       },
@@ -102,12 +88,12 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    compress: true,
+    compress: false,
     historyApiFallback: true,
     open: true,
     port: 1234,
     hot: true,
     watchContentBase: true,
   },
-  plugins: [htmlPlugin, webAssetManifest],
+  plugins: [htmlPlugin],
 };

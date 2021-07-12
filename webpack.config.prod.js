@@ -42,6 +42,11 @@ module.exports = {
         },
       },
       {
+        test: /\.ts$|\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/i,
         loader: 'css-loader',
         options: {
@@ -54,9 +59,6 @@ module.exports = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: {
-              url: false,
-            },
           },
           'resolve-url-loader',
           {

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Helmet} from 'react-helmet';
-import TextEditor from 'components/shared/text-editor';
 
 /**
  * Home Page component

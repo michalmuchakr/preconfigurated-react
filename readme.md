@@ -37,6 +37,7 @@ Then navigate to url using your favourite browser:
 
 <ul>
     <li>JavaScript</li>
+    <li>TypeScript</li>
     <li>React</li>
     <li>SCSS</li>
     <li>ReactStrap</li>
@@ -54,10 +55,10 @@ Then navigate to url using your favourite browser:
   
 ## Features
 <ul>
-    <li>Routing using `react-router-dom`
-    <li>Webpack  & babel configuration,
-    <li>Custom FLUX architecture,
-    <li>Hot reload development server,
-    <li>Import fonts from a file,
-    <li>Absolut path imports configuration
+    <li>Routing using `react-router-dom`</li>
+    <li>Webpack  & babel configuration,</li>
+    <li>Custom FLUX architecture,</li>
+    <li>Hot reload development server,</li>
+    <li>Import fonts from a file,</li>
+    <li>Absolut path imports configuration</li>
 </ul>

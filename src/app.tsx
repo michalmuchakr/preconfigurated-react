@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from "react";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Nav from './components/shared/nav.jsx';
@@ -6,7 +6,7 @@ import Footer from './components/shared/footer.jsx';
 import Home from './containers/home.jsx';
 import HeroPage from './containers/hero-page.jsx';
 
-const App = () => (
+const App: FC = () => (
   <Router>
     <div className="app">
       <Nav />

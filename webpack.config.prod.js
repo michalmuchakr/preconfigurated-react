@@ -13,7 +13,7 @@ const webAssetManifest = new WebpackAssetsManifest({
 });
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
   output: {
     filename: '[name]-[chunkhash].js',
     chunkFilename: '[name]-[id]-[chunkhash].js',

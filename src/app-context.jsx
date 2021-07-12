@@ -1,4 +1,8 @@
-import React, {createContext, useContext, useReducer} from 'react';
+import React, {
+  createContext,
+  useContext,
+  useReducer,
+} from 'react';
 import {appInitialState, appReducer} from './reducers/app-reducer';
 import PropTypes from 'prop-types';
 
@@ -9,11 +13,6 @@ const lazyInitState = () => {
   return appInitialState;
 };
 
-/**
- * Context Providers
- * @function AppContext
- * @param {JSX.Element} children
- *  */
 const AppContext = ({children}) => {
   const [appState, appDispatch] = useReducer(
     appReducer,

@@ -3,12 +3,12 @@ const path = require('path');
 
 const htmlPlugin = new HtmlWebPlugin({
   filename: './index.html',
-  favicon: 'src/assets/img/favicon.ico',
+  favicon: './public/assets/favicon.ico',
   template: './public/index.html',
 });
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
@@ -25,7 +25,6 @@ module.exports = {
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
-  stats: 'errors-only',
   target: 'web',
   module: {
     rules: [
@@ -59,6 +58,9 @@ module.exports = {
           'resolve-url-loader',
           {
             loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
           },
         ],
       },

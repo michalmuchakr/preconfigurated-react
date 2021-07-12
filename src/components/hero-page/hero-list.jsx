@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
-import {useAppStateContext} from 'app-context.jsx';
-import HeroItem from './hero-item.jsx';
+import {useAppStateContext} from 'app-context';
+import HeroItem from './hero-item';
 
 const HeroList = () => {
   const {heroData, isLoading, loadingID} = useAppStateContext();

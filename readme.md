@@ -6,7 +6,7 @@
 <h4>
   Please see app live: 
   <a href="https://preconfigurated-react.herokuapp.com/">
-    preconfigurated-react on herokuapp
+    preconfigured-react on herokuapp
   </a>
 </h4>
 
@@ -19,7 +19,7 @@ To kick of application
     npm start:dev
 ```
 
-Then navigate to url using your favourite browser:
+Then navigate to url using your browser of your choise:
 
 ```bash
     http://localhost:1234/
@@ -52,12 +52,12 @@ Then navigate to url using your favourite browser:
     <li>Node</li>
     <li>axios-mock-adapter</li>
 </ul>
-  
+
 ## Features
 <ul>
     <li>Routing using `react-router-dom`</li>
-    <li>Webpack  & babel configuration,</li>
-    <li>Custom FLUX architecture,</li>
+    <li>Webpack & babel configuration,</li>
+    <li>Custom FLUX architecture base on react hooks,</li>
     <li>Hot reload development server,</li>
     <li>Import fonts from a file,</li>
     <li>Absolut path imports configuration</li>

@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Nav from './components/shared/nav.jsx';
 import Footer from './components/shared/footer.jsx';
 import Home from './containers/home';
-import HeroPage from './containers/hero-page.jsx';
+import HeroPage from './containers/hero-page';
 
 const App: FunctionComponent = (): JSX.Element => (
   <Router>

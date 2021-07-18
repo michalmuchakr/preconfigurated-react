@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import React, { FunctionComponent, useEffect } from "react";
 import {Helmet} from 'react-helmet';
-import {getHeroes, setError} from 'actions/heros';
-import {useAppDispatchContext} from 'app-context.jsx';
-import HeroList from 'components/hero-page/hero-list.jsx';
+import {getHeroes, setError} from '../actions/heros';
+import {useAppDispatchContext} from '../app-context.jsx';
+import HeroList from '../components/hero-page/hero-list.jsx';
 import 'styles/hero-page.scss';
 
 /**
@@ -10,11 +10,11 @@ import 'styles/hero-page.scss';
  * @module app-container/example
  * @return {JSX.Element} <Example />
  */
-const HeroPage = () => {
+const HeroPage : FunctionComponent = (): JSX.Element => {
   const appDispatch = useAppDispatchContext();
 
   useEffect(() => {
-    getHeroes(appDispatch).catch((e) => setError(e));
+    getHeroes(appDispatch).catch((e: object) => setError(e));
   }, []);
 
   return (

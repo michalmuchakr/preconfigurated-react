@@ -9,22 +9,17 @@ import {
   Card,
   Input,
 } from 'reactstrap';
-import {Editor, EditorState} from 'draft-js';
 import 'draft-js/dist/Draft.css';
 
 const heroItem = ({hero, index}) => {
   const [heroFirstName, setHeroFirstName] = useState(hero.first_name);
   const [heroDescription, setHeroDescription] = useState(hero.description);
   const [isUnderEdition, setIsUnderEdition] = useState(false);
-  const animateClassname = `example-page__list__item animate animate-delay__${index}`;
-
-  const [editorState, setEditorState] = React.useState(() =>
-    EditorState.createEmpty(),
-  );
+  const animateClassname = `hero-page__list__item animate animate-delay__${index}`;
 
   const editHeroName = (e) => {
     e.stopPropagation();
-    const {name, value} = e.target;
+    const {value} = e.target;
     setHeroFirstName(value);
   };
 

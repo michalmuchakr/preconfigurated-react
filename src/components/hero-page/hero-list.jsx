@@ -4,10 +4,9 @@ import HeroItem from './hero-item';
 
 const HeroList = () => {
   const {heroData, isLoading, loadingID} = useAppStateContext();
-  const editedFields = useRef({});
 
   return (
-    <ul className="example-page__list mb-4">
+    <ul className="hero-page__list mb-4">
       {heroData &&
         !heroData.length &&
         isLoading &&

@@ -26,7 +26,7 @@ const ContainerWrapper = ({
   pageTitle,
   pageDescription,
   pageName,
-}: ContainerWrapperProps) => {
+}: ContainerWrapperProps) : JSX.Element => {
   return (
     <>
       <Helmet>

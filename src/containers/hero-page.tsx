@@ -1,16 +1,16 @@
 import React, { FunctionComponent, useEffect } from "react";
-import {Helmet} from 'react-helmet';
 import {getHeroes, setError} from '../actions/heros';
 import {useAppDispatchContext} from '../app-context.jsx';
-import HeroList from '../components/hero-page/hero-list.jsx';
 import 'styles/hero-page.scss';
+import ContainerWrapper from "./container-wrapper";
+import HeroPageContent from "../components/hero-page/hero-page-content";
 
 /**
- * Example Page component
- * @module app-container/example
+ * Hero Page container
+ * @module app-container/hero-page
  * @return {JSX.Element} <Example />
  */
-const HeroPage : FunctionComponent = (): JSX.Element => {
+const HeroPage : FunctionComponent = () : JSX.Element => {
   const appDispatch = useAppDispatchContext();
 
   useEffect(() => {
@@ -18,16 +18,13 @@ const HeroPage : FunctionComponent = (): JSX.Element => {
   }, []);
 
   return (
-    <>
-      <Helmet>
-        <title>Example Page</title>
-        <meta name="description" content="Example Page" />
-      </Helmet>
-      <div className="example-page page">
-        <h1 className="mt-4 mb-3">Example page</h1>
-        <HeroList />
-      </div>
-    </>
+    <ContainerWrapper
+      pageTitle='Example Page'
+      pageDescription='Hero page, show list of heroes'
+      pageName=''
+    >
+      <HeroPageContent />
+    </ContainerWrapper>
   );
 };
 

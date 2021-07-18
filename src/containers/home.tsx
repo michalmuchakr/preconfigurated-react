@@ -1,15 +1,19 @@
 import React, {FunctionComponent} from 'react';
 import ContainerWrapper from './container-wrapper';
+import HomePageContent from "../components/home-page/home-page-content";
 
-const Home: FunctionComponent = () => (
+/**
+ * Home Page container
+ * @module app-container/home-page
+ * @return {JSX.Element}
+ */
+const Home : FunctionComponent = () : JSX.Element => (
   <ContainerWrapper
     pageTitle="Home Page"
     pageDescription="Home Page"
     pageName="home"
   >
-    <div className="home-page page">
-      <h1 className="mt-4 mb-3">Home page</h1>
-    </div>
+    <HomePageContent />
   </ContainerWrapper>
 );
 

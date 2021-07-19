@@ -4,7 +4,7 @@ const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 const htmlPlugin = new HtmlWebPlugin({
   filename: './index.html',
-  favicon: 'src/assets/img/favicon.ico',
+  favicon: './public/assets/favicon.ico',
   template: './public/index.html',
 });
 
@@ -31,20 +31,22 @@ module.exports = {
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+  target: 'web',
   stats: 'errors-only',
   module: {
     rules: [
       {
         test: /\.js$|\.jsx$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        include: path.resolve(__dirname, './src'),
+        use: [
+          'thread-loader',
+          'babel-loader'
+        ]
       },
       {
         test: /\.ts$|\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        include: path.resolve(__dirname, './src'),
       },
       {
         test: /\.css$/i,
@@ -90,4 +92,5 @@ module.exports = {
     ],
   },
   plugins: [htmlPlugin, webAssetManifest],
+  mode: "production",
 };

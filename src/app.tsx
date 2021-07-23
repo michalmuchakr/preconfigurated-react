@@ -1,12 +1,12 @@
-import React, {FunctionComponent} from 'react';
+import React, {FunctionComponent, ReactElement} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Nav from './components/shared/nav.jsx';
-import Footer from './components/shared/footer.jsx';
+import Footer from './components/shared/footer';
 import Home from './containers/home';
 import HeroPage from './containers/hero-page';
 
-const App: FunctionComponent = (): JSX.Element => (
+const App: FunctionComponent = (): ReactElement => (
   <Router>
     <div className="app">
       <Nav />

@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useEffect } from "react";
+import React, { FunctionComponent, useEffect, ReactElement} from "react";
 import {getHeroes, setError} from '../actions/heros';
-import {useAppDispatchContext} from '../app-context.jsx';
+import {useAppDispatchContext} from '../app-context';
 import 'styles/hero-page.scss';
 import ContainerWrapper from "./container-wrapper";
 import HeroPageContent from "../components/hero-page/hero-page-content";
@@ -8,9 +8,9 @@ import HeroPageContent from "../components/hero-page/hero-page-content";
 /**
  * Hero Page container
  * @module app-container/hero-page
- * @return {JSX.Element} <Example />
+ * @return {ReactElement} <Example />
  */
-const HeroPage : FunctionComponent = () : JSX.Element => {
+const HeroPage : FunctionComponent = () : ReactElement => {
   const appDispatch = useAppDispatchContext();
 
   useEffect(() => {

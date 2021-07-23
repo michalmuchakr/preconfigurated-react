@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import {Helmet} from 'react-helmet';
 
 /**
@@ -8,25 +8,25 @@ import {Helmet} from 'react-helmet';
  *      AppStateContext.Provider      - provider for app context
  *      AppDispatchContext.Provider   - provider for dispatch methods
  *
- * @param children        {JSX.Element}  container, view level component
+ * @param children        {ReactElement}  container, view level component
  * @param pageTitle       {String}       page title, meta attribute
  * @param pageDescription {String}       page description, meta attribute
  * @param pageName        {String}       page name, used for page class selector
  *  */
 
-type ContainerWrapperProps = {
-  children: JSX.Element;
+interface ContainerWrapperProps {
+  children: ReactElement;
   pageTitle: string;
   pageDescription: string;
   pageName: string;
-};
+}
 
 const ContainerWrapper = ({
   children,
   pageTitle,
   pageDescription,
   pageName,
-}: ContainerWrapperProps) : JSX.Element => {
+}: ContainerWrapperProps) : ReactElement => {
   return (
     <>
       <Helmet>

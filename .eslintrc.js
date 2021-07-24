@@ -6,8 +6,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    'prettier',
   ],
   globals: {
     Atomics: 'readonly',
@@ -20,7 +20,13 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'typescript-eslint/eslint-plugin'],
+  plugins: [
+    'react',
+    'prettier',
+    'typescript-eslint/eslint-plugin',
+    '@typescript-eslint',
+    'jest',
+  ],
   rules: {
     'prettier/prettier': 'error',
   },

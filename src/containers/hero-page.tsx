@@ -1,9 +1,10 @@
 import React, {FunctionComponent, useEffect, ReactElement} from 'react';
 import {getHeroes, setError} from '../actions/heros';
 import {useAppDispatchContext} from '../app-context';
-import 'styles/hero-page.scss';
 import ContainerWrapper from './container-wrapper';
 import HeroPageContent from '../components/hero-page/hero-page-content';
+
+import 'styles/hero-page.scss';
 
 /**
  * Hero Page container

@@ -38,10 +38,7 @@ module.exports = {
       {
         test: /\.js$|\.jsx$/,
         include: path.resolve(__dirname, './src'),
-        use: [
-          'thread-loader',
-          'babel-loader'
-        ]
+        use: ['thread-loader', 'babel-loader'],
       },
       {
         test: /\.ts$|\.tsx?$/,
@@ -92,5 +89,5 @@ module.exports = {
     ],
   },
   plugins: [htmlPlugin, webAssetManifest],
-  mode: "production",
+  mode: 'production',
 };

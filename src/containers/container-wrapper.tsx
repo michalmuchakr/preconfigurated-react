@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, {ReactElement} from 'react';
 import {Helmet} from 'react-helmet';
 
 /**
@@ -26,7 +26,7 @@ const ContainerWrapper = ({
   pageTitle,
   pageDescription,
   pageName,
-}: ContainerWrapperProps) : ReactElement => {
+}: ContainerWrapperProps): ReactElement => {
   return (
     <>
       <Helmet>

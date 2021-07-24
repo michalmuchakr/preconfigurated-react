@@ -32,10 +32,7 @@ module.exports = {
         test: /\.js$|\.jsx$/,
         include: path.resolve(__dirname, './src'),
         exclude: /node_modules/,
-        use: [
-          'thread-loader',
-          'babel-loader'
-        ]
+        use: ['thread-loader', 'babel-loader'],
       },
       {
         test: /\.ts$|\.tsx?$/,

@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useReducer, ReactElement } from "react";
+import React, {
+  createContext,
+  useContext,
+  useReducer,
+  ReactElement,
+} from 'react';
+
 import {appInitialState, appReducer} from './reducers/app-reducer';
 import PropTypes from 'prop-types';
 import AppContextProps from './types/store/app-context-types';
@@ -6,11 +12,9 @@ import AppContextProps from './types/store/app-context-types';
 const AppStateContext = createContext({});
 const AppDispatchContext = createContext({});
 
-const lazyInitState = () => (
-  appInitialState
-);
+const lazyInitState = () => appInitialState;
 
-const AppContext = ({ children } : AppContextProps) : ReactElement => {
+const AppContext = ({children}: AppContextProps): ReactElement => {
   const [appState, appDispatch] = useReducer(
     appReducer,
     appInitialState,

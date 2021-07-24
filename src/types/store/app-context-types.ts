@@ -1,7 +1,7 @@
-import { ReactElement } from "react";
+import {ReactElement} from 'react';
 
 interface AppContextProps {
-  children: ReactElement
+  children: ReactElement;
 }
 
 export default AppContextProps;

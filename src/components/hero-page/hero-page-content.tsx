@@ -1,5 +1,5 @@
-import React from "react";
-import HeroList from "./hero-list";
+import React from 'react';
+import HeroList from './hero-list';
 
 const HeroPageContent = () => (
   <div className="hero-page page">

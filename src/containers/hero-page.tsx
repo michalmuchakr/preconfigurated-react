@@ -1,16 +1,16 @@
-import React, { FunctionComponent, useEffect, ReactElement} from "react";
+import React, {FunctionComponent, useEffect, ReactElement} from 'react';
 import {getHeroes, setError} from '../actions/heros';
 import {useAppDispatchContext} from '../app-context';
 import 'styles/hero-page.scss';
-import ContainerWrapper from "./container-wrapper";
-import HeroPageContent from "../components/hero-page/hero-page-content";
+import ContainerWrapper from './container-wrapper';
+import HeroPageContent from '../components/hero-page/hero-page-content';
 
 /**
  * Hero Page container
  * @module app-container/hero-page
  * @return {ReactElement} <Example />
  */
-const HeroPage : FunctionComponent = () : ReactElement => {
+const HeroPage: FunctionComponent = (): ReactElement => {
   const appDispatch = useAppDispatchContext();
 
   useEffect(() => {
@@ -19,9 +19,9 @@ const HeroPage : FunctionComponent = () : ReactElement => {
 
   return (
     <ContainerWrapper
-      pageTitle='Example Page'
-      pageDescription='Hero page, show list of heroes'
-      pageName=''
+      pageTitle="Example Page"
+      pageDescription="Hero page, show list of heroes"
+      pageName=""
     >
       <HeroPageContent />
     </ContainerWrapper>

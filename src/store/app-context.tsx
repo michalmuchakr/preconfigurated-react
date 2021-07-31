@@ -3,18 +3,19 @@ import React, {
   useContext,
   useReducer,
   ReactElement,
+  FC,
 } from 'react';
 
-import {appInitialState, appReducer} from './reducers/app-reducer';
+import appInitialState from './app-global-store';
+import {appReducer} from '../reducers/app-reducer';
 import PropTypes from 'prop-types';
-import AppContextProps from './types/store/app-context-types';
 
 const AppStateContext = createContext({});
 const AppDispatchContext = createContext({});
 
 const lazyInitState = () => appInitialState;
 
-const AppContext = ({children}: AppContextProps): ReactElement => {
+const AppContext: FC = ({children}): ReactElement => {
   const [appState, appDispatch] = useReducer(
     appReducer,
     appInitialState,

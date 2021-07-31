@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {useAppStateContext} from 'app-context.tsx';
+import {useAppStateContext} from '../../store/app-context';
 
 const Nav = () => {
   const {userAuthenticated} = useAppStateContext();

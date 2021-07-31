@@ -16,15 +16,6 @@ const SET_ERROR = (state: any, {error}: any) => ({
   error,
 });
 
-export const appInitialState: AppStoreType = {
-  heroData: [],
-  authToken: '',
-  error: null,
-  isLoading: false,
-  loadingID: '',
-  userAuthenticated: false,
-};
-
 export const appReducer = (
   state: any,
   action: {type: (arg0: any, arg1: any) => any},

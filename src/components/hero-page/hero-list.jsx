@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {useAppStateContext} from 'app-context';
+import {useAppStateContext} from 'store/app-context';
 import HeroItem from './hero-item';
 
 const HeroList = () => {

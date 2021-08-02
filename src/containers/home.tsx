@@ -1,4 +1,4 @@
-import React, {FC, ReactElement} from 'react';
+import * as React from 'react';
 import ContainerWrapper from './container-wrapper';
 import HomePageContent from '../components/home-page/home-page-content';
 
@@ -7,7 +7,7 @@ import HomePageContent from '../components/home-page/home-page-content';
  * @module app-container/home-page
  * @return {ReactElement}
  */
-const Home = (): ReactElement => (
+const Home = () => (
   <ContainerWrapper
     pageTitle="Home Page"
     pageDescription="Home Page"

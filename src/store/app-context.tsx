@@ -1,22 +1,16 @@
-import React, {
-  createContext,
-  useContext,
-  useReducer,
-  ReactElement,
-  FC,
-} from 'react';
+import * as React from 'react';
 
 import appInitialState from './app-global-store';
 import {appReducer} from '../reducers/app-reducer';
 import PropTypes from 'prop-types';
-
-const AppStateContext = createContext({});
-const AppDispatchContext = createContext({});
+import AppContextType from '../types/store/app-context';
+const AppStateContext = React.createContext({});
+const AppDispatchContext = React.createContext({});
 
 const lazyInitState = () => appInitialState;
 
-const AppContext: FC = ({children}): ReactElement => {
-  const [appState, appDispatch] = useReducer(
+const AppContext = ({children}: AppContextType) => {
+  const [appState, appDispatch] = React.useReducer(
     appReducer,
     appInitialState,
     lazyInitState,
@@ -32,7 +26,7 @@ const AppContext: FC = ({children}): ReactElement => {
 };
 
 function useAppStateContext() {
-  const appContext = useContext(AppStateContext);
+  const appContext = React.useContext(AppStateContext);
   if (appContext === undefined) {
     throw new Error('useAppStateContext must be used within a CountProvider');
   }
@@ -40,7 +34,7 @@ function useAppStateContext() {
 }
 
 function useAppDispatchContext() {
-  const appDispatch = useContext(AppDispatchContext);
+  const appDispatch = React.useContext(AppDispatchContext);
   if (appDispatch === undefined) {
     throw new Error(
       'useAppDispatchContext must be used within a CountProvider',

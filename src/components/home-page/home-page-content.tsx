@@ -1,6 +1,6 @@
-import React, {FC, ReactElement} from 'react';
+import * as React from 'react';
 
-const HomePageContent: FC = (): ReactElement => {
+const HomePageContent = () => {
   return (
     <div className="home-page page">
       <h1 className="mt-4 mb-3">Home page</h1>

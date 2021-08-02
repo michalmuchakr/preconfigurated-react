@@ -1,4 +1,3 @@
-import React from 'react';
 import TextEditor from '../../components/shared/text-editor';
 import '../soft-bastion-ui/src/styles/main.scss';
 

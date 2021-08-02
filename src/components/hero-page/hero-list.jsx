@@ -1,4 +1,3 @@
-import React, {useRef} from 'react';
 import {useAppStateContext} from 'store/app-context';
 import HeroItem from './hero-item';
 

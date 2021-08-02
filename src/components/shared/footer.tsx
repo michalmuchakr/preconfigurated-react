@@ -1,6 +1,6 @@
-import React, {ReactElement} from 'react';
+import * as React from 'react';
 
-const Footer = (): ReactElement => (
+const Footer = () => (
   <footer className="footer">
     <div className="footer-box">
       <p>Some footer txt</p>

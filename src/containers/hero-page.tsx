@@ -1,4 +1,5 @@
-import React, {FC, useEffect, ReactElement} from 'react';
+//import {useEffect, ReactElement} from 'react';
+import * as React from 'react';
 import {getHeroes, setError} from '../actions/heros';
 import {useAppDispatchContext} from '../store/app-context';
 import ContainerWrapper from './container-wrapper';
@@ -9,12 +10,12 @@ import 'styles/hero-page.scss';
 /**
  * Hero Page container
  * @module app-container/hero-page
- * @return {ReactElement} <Example />
+ * @return {ReactNode} <Example />
  */
-const HeroPage: FC = (): ReactElement => {
+const HeroPage = () => {
   const appDispatch = useAppDispatchContext();
 
-  useEffect(() => {
+  React.useEffect(() => {
     getHeroes(appDispatch).catch((e: object) => setError(e));
   }, []);
 

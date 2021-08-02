@@ -1,7 +1,7 @@
 import MockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 
-import heroData from 'mock-api/data/heroses';
+import heroData from '../data/heroses';
 
 const mock = new MockAdapter(axios, {
   delayResponse: 1000,

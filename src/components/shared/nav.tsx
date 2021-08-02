@@ -1,8 +1,9 @@
+import * as React from 'react';
 import {NavLink} from 'react-router-dom';
 import {useAppStateContext} from '../../store/app-context';
 
 const Nav = () => {
-  const {userAuthenticated} = useAppStateContext();
+  const appState = useAppStateContext();
 
   return (
     <nav className="navigation">
@@ -34,7 +35,9 @@ const Nav = () => {
             className="nav__list-item__link"
             activeClassName="nav__list-item__link-active"
           >
-            {userAuthenticated ? 'Hello User!' : 'Not authenticated user!'}
+            {appState?.userAuthenticated
+              ? 'Hello User!'
+              : 'Not authenticated user!'}
           </NavLink>
         </li>
       </ul>

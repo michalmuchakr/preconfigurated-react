@@ -1,4 +1,4 @@
-import AppStoreType from '../types/store/app-store-type';
+import AppStoreType from './app-store-type';
 
 const appInitialState: AppStoreType = {
   heroData: [],

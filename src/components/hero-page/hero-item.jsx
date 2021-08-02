@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import * as React from 'react';
 import {
   Collapse,
   Button,
@@ -12,9 +12,11 @@ import {
 import 'draft-js/dist/Draft.css';
 
 const heroItem = ({hero, index}) => {
-  const [heroFirstName, setHeroFirstName] = useState(hero.first_name);
-  const [heroDescription, setHeroDescription] = useState(hero.description);
-  const [isUnderEdition, setIsUnderEdition] = useState(false);
+  const [heroFirstName, setHeroFirstName] = React.useState(hero.first_name);
+  const [heroDescription, setHeroDescription] = React.useState(
+    hero.description,
+  );
+  const [isUnderEdition, setIsUnderEdition] = React.useState(false);
   const animateClassname = `hero-page__list__item animate animate-delay__${index}`;
 
   const editHeroName = (e) => {
@@ -28,7 +30,7 @@ const heroItem = ({hero, index}) => {
     setHeroDescription(e.target.value);
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   const editHero = (e) => {

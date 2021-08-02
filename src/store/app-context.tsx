@@ -3,9 +3,10 @@ import * as React from 'react';
 import appInitialState from './app-global-store';
 import {appReducer} from '../reducers/app-reducer';
 import PropTypes from 'prop-types';
-import AppContextType from '../types/store/app-context';
-const AppStateContext = React.createContext({});
-const AppDispatchContext = React.createContext({});
+import AppContextType from './app-context-type';
+import AppStoreType from './app-store-type';
+const AppStateContext = React.createContext<AppStoreType | null>(null);
+const AppDispatchContext = React.createContext<object | null>(null);
 
 const lazyInitState = () => appInitialState;
 

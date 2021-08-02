@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {useAppStateContext} from 'store/app-context';
 import HeroItem from './hero-item';
 

@@ -1,4 +1,3 @@
-//import {useEffect, ReactElement} from 'react';
 import * as React from 'react';
 import {getHeroes, setError} from '../actions/heros';
 import {useAppDispatchContext} from '../store/app-context';

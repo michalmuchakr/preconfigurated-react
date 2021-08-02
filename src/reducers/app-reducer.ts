@@ -1,5 +1,3 @@
-import AppStoreType from '../types/store/app-store-type';
-
 const SET_HEROES = (state: any, {heroData}: any) => ({
   ...state,
   heroData,

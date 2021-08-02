@@ -19,6 +19,10 @@ const heroItem = ({hero, index}) => {
   const [isUnderEdition, setIsUnderEdition] = React.useState(false);
   const animateClassname = `hero-page__list__item animate animate-delay__${index}`;
 
+  const preventPanelToggle = (e) => {
+    e.stopPropagation();
+  };
+
   const editHeroName = (e) => {
     e.stopPropagation();
     const {value} = e.target;
@@ -50,33 +54,34 @@ const heroItem = ({hero, index}) => {
             type="text"
             name={hero.id}
             value={heroFirstName}
-            onChange={(e) => editHeroName(e)}
+            onClick={preventPanelToggle}
+            onChange={editHeroName}
           />
         ) : (
-          <span>{heroFirstName}</span>
+          <span className="hero-name__text">{heroFirstName}</span>
         )}
 
         <ButtonGroup size="sm">
-          <Button outline onClick={(e) => editHero(e)}>
+          <Button outline onClick={editHero}>
             {isUnderEdition ? 'save' : 'edit'}
           </Button>
         </ButtonGroup>
       </CardHeader>
       <Collapse isOpen={isOpen}>
-        <CardBody>
-          <CardText>
-            {isUnderEdition ? (
-              <Input
-                type="textarea"
-                name="text"
-                id="exampleText"
-                value={heroDescription}
-                onChange={(e) => editHeroDescription(e)}
-              />
-            ) : (
-              <span>{heroDescription}</span>
-            )}
-          </CardText>
+        <CardBody className="hero__card-body">
+          {isUnderEdition ? (
+            <Input
+              type="textarea"
+              name="text"
+              id="exampleText"
+              value={heroDescription}
+              onClick={preventPanelToggle}
+              onChange={editHeroDescription}
+              className="hero__text-area"
+            />
+          ) : (
+            <CardText className="hero__card-text">{heroDescription}</CardText>
+          )}
         </CardBody>
       </Collapse>
     </Card>

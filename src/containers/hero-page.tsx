@@ -20,7 +20,7 @@ const HeroPage = () => {
 
   return (
     <ContainerWrapper
-      pageTitle="Example Page"
+      pageTitle="Hero page"
       pageDescription="Hero page, show list of heroes"
       pageName=""
     >

@@ -6,7 +6,7 @@ import Footer from './components/shared/footer';
 import Home from './containers/home';
 import HeroPage from './containers/hero-page';
 
-const App = () => (
+const App = (): JSX.Element => (
   <Router>
     <div className="app">
       <Nav />

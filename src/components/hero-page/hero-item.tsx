@@ -10,37 +10,41 @@ import {
   Input,
 } from 'reactstrap';
 import 'draft-js/dist/Draft.css';
+import HeroItemType from '../../types/hero/hero-item-type';
 
-const heroItem = ({hero, index}) => {
-  const [heroFirstName, setHeroFirstName] = React.useState(hero.first_name);
-  const [heroDescription, setHeroDescription] = React.useState(
-    hero.description,
-  );
+export const HeroItem = ({
+  id,
+  orderNumber,
+  firstName,
+  description,
+}: HeroItemType): JSX.Element => {
+  const [heroFirstName, setHeroFirstName] = React.useState(firstName);
+  const [heroDescription, setHeroDescription] = React.useState(description);
   const [isUnderEdition, setIsUnderEdition] = React.useState(false);
-  const animateClassname = `hero-page__list__item animate animate-delay__${index}`;
+  const animateClassname = `hero-page__list__item animate animate-delay__${orderNumber}`;
 
-  const preventPanelToggle = (e) => {
+  const preventPanelToggle = (e: React.MouseEvent<HTMLInputElement>) => {
     e.stopPropagation();
   };
 
-  const editHeroName = (e) => {
+  function editHeroName(e: React.ChangeEvent<HTMLInputElement>) {
     e.stopPropagation();
     const {value} = e.target;
     setHeroFirstName(value);
-  };
+  }
 
-  const editHeroDescription = (e) => {
+  function editHeroDescriptionOnClick(e: React.ChangeEvent<HTMLInputElement>) {
     e.stopPropagation();
     setHeroDescription(e.target.value);
-  };
+  }
 
   const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-  const editHero = (e) => {
+  function editHeroOnClick(e: React.MouseEvent<HTMLElement>) {
     e.stopPropagation();
     setIsUnderEdition(!isUnderEdition);
-  };
+  }
 
   return (
     <Card className={`${animateClassname} mb-2`}>
@@ -52,7 +56,7 @@ const heroItem = ({hero, index}) => {
           <Input
             className="hero-name__input"
             type="text"
-            name={hero.id}
+            name={`hero-name__${id}`}
             value={heroFirstName}
             onClick={preventPanelToggle}
             onChange={editHeroName}
@@ -62,7 +66,7 @@ const heroItem = ({hero, index}) => {
         )}
 
         <ButtonGroup size="sm">
-          <Button outline onClick={editHero}>
+          <Button outline onClick={editHeroOnClick}>
             {isUnderEdition ? 'save' : 'edit'}
           </Button>
         </ButtonGroup>
@@ -76,7 +80,7 @@ const heroItem = ({hero, index}) => {
               id="exampleText"
               value={heroDescription}
               onClick={preventPanelToggle}
-              onChange={editHeroDescription}
+              onChange={editHeroDescriptionOnClick}
               className="hero__text-area"
             />
           ) : (
@@ -87,5 +91,3 @@ const heroItem = ({hero, index}) => {
     </Card>
   );
 };
-
-export default heroItem;

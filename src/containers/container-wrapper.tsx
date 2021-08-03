@@ -26,7 +26,7 @@ const ContainerWrapper = ({
   pageTitle,
   pageDescription,
   pageName,
-}: ContainerWrapperProps) => {
+}: ContainerWrapperProps): React.ReactElement => {
   return (
     <>
       <Helmet>

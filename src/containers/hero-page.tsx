@@ -11,11 +11,11 @@ import 'styles/hero-page.scss';
  * @module app-container/hero-page
  * @return {ReactNode} <HeroPage />
  */
-const HeroPage = () => {
+const HeroPage = (): JSX.Element => {
   const appDispatch = useAppDispatchContext();
 
   React.useEffect(() => {
-    getHeroes(appDispatch).catch((e: object) => setError(e));
+    getHeroes(appDispatch).catch((e) => setError(e));
   }, [appDispatch]);
 
   return (

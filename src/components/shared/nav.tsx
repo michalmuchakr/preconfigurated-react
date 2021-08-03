@@ -2,7 +2,7 @@ import * as React from 'react';
 import {NavLink} from 'react-router-dom';
 import {useAppStateContext} from '../../store/app-context';
 
-const Nav = () => {
+const Nav = (): JSX.Element => {
   const appState = useAppStateContext();
 
   return (

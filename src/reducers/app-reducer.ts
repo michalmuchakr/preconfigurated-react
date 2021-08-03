@@ -1,15 +1,31 @@
-const SET_HEROES = (state: object, {heroData}: any) => ({
+import AppStoreType from '../types/store/app-store-type';
+import {
+  setErrorPropType,
+  setHeroPropType,
+  setLoadingPropType,
+} from '../types/reducers/reducer-types';
+
+const SET_HEROES = (
+  state: AppStoreType,
+  {heroData}: setHeroPropType,
+): AppStoreType => ({
   ...state,
   heroData,
 });
 
-const SET_LOADING = (state: any, {isLoading, loadingID}: any) => ({
+const SET_LOADING = (
+  state: AppStoreType,
+  {isLoading, loadingID}: setLoadingPropType,
+): AppStoreType => ({
   ...state,
   isLoading,
   loadingID,
 });
 
-const SET_ERROR = (state: any, {error}: any) => ({
+const SET_ERROR = (
+  state: AppStoreType,
+  {error}: setErrorPropType,
+): AppStoreType => ({
   ...state,
   error,
 });

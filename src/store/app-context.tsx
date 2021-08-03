@@ -3,14 +3,14 @@ import * as React from 'react';
 import appInitialState from './app-global-store';
 import {appReducer} from '../reducers/app-reducer';
 import PropTypes from 'prop-types';
-import AppContextType from './app-context-type';
-import AppStoreType from './app-store-type';
+import AppContextType from '../types/store/app-context-type';
+import AppStoreType from '../types/store/app-store-type';
 const AppStateContext = React.createContext<AppStoreType | null>(null);
 const AppDispatchContext = React.createContext<object | null>(null);
 
 const lazyInitState = () => appInitialState;
 
-const AppContext = ({children}: AppContextType) => {
+const AppContext = ({children}: AppContextType): JSX.Element => {
   const [appState, appDispatch] = React.useReducer(
     appReducer,
     appInitialState,
@@ -26,7 +26,7 @@ const AppContext = ({children}: AppContextType) => {
   );
 };
 
-function useAppStateContext() {
+function useAppStateContext(): AppStoreType | null {
   const appContext = React.useContext(AppStateContext);
   if (appContext === undefined) {
     throw new Error('useAppStateContext must be used within a CountProvider');

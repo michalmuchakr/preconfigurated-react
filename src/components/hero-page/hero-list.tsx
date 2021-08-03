@@ -4,7 +4,7 @@ import {HeroItem} from './hero-item';
 import HeroItemType from '../../types/hero/hero-item-type';
 
 const HeroList = (): JSX.Element => {
-  const {heroData, isLoading, loadingID} = useAppStateContext();
+  const {heroData, isLoading, loadingID} = {...useAppStateContext()};
 
   return (
     <ul className="hero-page__list mb-4">

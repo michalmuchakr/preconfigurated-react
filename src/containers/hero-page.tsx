@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {getHeroes, setError} from '../actions/heros';
+import {getHeroes, setError} from '../actions/heros-actions';
 import {useAppDispatchContext} from '../store/app-context';
 import ContainerWrapper from './container-wrapper';
 import HeroPageContent from '../components/hero-page/hero-page-content';

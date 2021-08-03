@@ -1,14 +1,15 @@
 import axios from 'axios';
-import reducers from 'reducers/app-reducer';
-import {setLoading} from './common';
+import reducers from '../reducers/app-reducer';
+import {setLoading} from './common-actions';
 import 'mock-api/routes/heros';
+import HeroItemType from '../types/hero/hero-item-type';
 
-const saveHeroes = (heroData) => ({
+const saveHeroes = (heroData: HeroItemType[]) => ({
   type: reducers.SET_HEROES,
   heroData,
 });
 
-const setError = (error) => ({
+const setError = (error: string) => ({
   type: reducers.SET_ERROR,
   error,
 });

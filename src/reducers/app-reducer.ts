@@ -31,8 +31,10 @@ const SET_ERROR = (
 });
 
 export const appReducer = (
-  state: any,
-  action: {type: (arg0: any, arg1: any) => any},
+  state: never,
+  action: {
+    type: (state: never, b: {type: (a: never, b: never) => never}) => never;
+  },
 ) => {
   if (typeof action.type === 'function') {
     return action.type(state, action);

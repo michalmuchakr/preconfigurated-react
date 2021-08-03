@@ -9,14 +9,14 @@ import 'styles/hero-page.scss';
 /**
  * Hero Page container
  * @module app-container/hero-page
- * @return {ReactNode} <Example />
+ * @return {ReactNode} <HeroPage />
  */
 const HeroPage = () => {
   const appDispatch = useAppDispatchContext();
 
   React.useEffect(() => {
     getHeroes(appDispatch).catch((e: object) => setError(e));
-  }, []);
+  }, [appDispatch]);
 
   return (
     <ContainerWrapper

@@ -1,4 +1,4 @@
-const SET_HEROES = (state: any, {heroData}: any) => ({
+const SET_HEROES = (state: object, {heroData}: any) => ({
   ...state,
   heroData,
 });

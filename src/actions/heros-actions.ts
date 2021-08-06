@@ -39,7 +39,9 @@ const getHeroes = (appDispatch: Dispatch<actionType> | null): void => {
       .catch((err) => {
         appDispatch(setError(err));
       })
-      .finally(() => appDispatch(setLoading(false, null)));
+      .finally(() => {
+        appDispatch(setLoading(false, null));
+      });
   }
 };
 

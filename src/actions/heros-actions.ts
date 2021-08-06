@@ -32,11 +32,14 @@ const getHeroes = (appDispatch: Dispatch<actionType> | null): void => {
   if (appDispatch) {
     appDispatch(setLoading(true, 'heroList'));
 
-    fetchHeroes().then((heroData) => {
-      appDispatch(saveHeroes(heroData));
-    });
-
-    appDispatch(setLoading(false, null));
+    fetchHeroes()
+      .then((heroData) => {
+        appDispatch(saveHeroes(heroData));
+      })
+      .catch((err) => {
+        appDispatch(setError(err));
+      })
+      .finally(() => appDispatch(setLoading(false, null)));
   }
 };
 

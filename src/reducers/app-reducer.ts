@@ -31,9 +31,9 @@ const SET_ERROR = (
 });
 
 export const appReducer = (
-  state: never,
+  state: AppStoreType,
   action: {
-    type: (state: never, b: {type: (a: never, b: never) => never}) => never;
+    type: (state: AppStoreType, b: unknown) => never;
   },
 ) => {
   if (typeof action.type === 'function') {

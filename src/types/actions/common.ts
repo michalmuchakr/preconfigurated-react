@@ -1,13 +1,20 @@
 import AppStoreType from '../store/app-store-type';
-import {setLoadingPropType} from '../reducers/reducer-types';
+import {setErrorPropType, setLoadingPropType} from '../reducers/reducer-types';
 
 type setLoadingActionType = {
   isLoading: boolean;
-  loadingID: string;
+  loadingID: string | null;
   type: (
     state: AppStoreType,
     {isLoading, loadingID}: setLoadingPropType,
   ) => AppStoreType;
 };
 
-export {setLoadingActionType};
+type setErrorActionType = {
+  error: string | null;
+  type: (state: AppStoreType, {error}: setErrorPropType) => AppStoreType;
+};
+
+type actionType = setLoadingActionType | setErrorActionType | unknown;
+
+export {actionType, setErrorActionType, setLoadingActionType};

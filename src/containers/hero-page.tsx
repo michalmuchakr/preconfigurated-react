@@ -1,10 +1,12 @@
 import * as React from 'react';
-import {getHeroes, setError} from '../actions/heros-actions';
+import {getHeroes} from '../actions/heros-actions';
 import {useAppDispatchContext} from '../store/app-context';
 import ContainerWrapper from './container-wrapper';
 import HeroPageContent from '../components/hero-page/hero-page-content';
 
 import 'styles/hero-page.scss';
+import {actionType} from '../types/actions/common';
+import {Dispatch} from 'react';
 
 /**
  * Hero Page container
@@ -12,10 +14,10 @@ import 'styles/hero-page.scss';
  * @return {ReactNode} <HeroPage />
  */
 const HeroPage = (): JSX.Element => {
-  const appDispatch = useAppDispatchContext();
+  const appDispatch: Dispatch<actionType> | null = useAppDispatchContext();
 
   React.useEffect(() => {
-    getHeroes(appDispatch).catch((e) => setError(e));
+    getHeroes(appDispatch);
   }, [appDispatch]);
 
   return (

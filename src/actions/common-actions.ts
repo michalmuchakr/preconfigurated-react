@@ -3,7 +3,7 @@ import {setLoadingActionType} from '../types/actions/common';
 
 const setLoading = (
   isLoading: boolean,
-  loadingID: string,
+  loadingID: string | null,
 ): setLoadingActionType => {
   return {
     type: reducers.SET_LOADING,

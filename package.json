@@ -22,7 +22,7 @@
     "clean": "shx rm -rf ./dist",
     "start": "node express-static.js",
     "start:dev": "webpack serve --config webpack.config.dev.js --progress --profile",
-    "lint": "eslint src/**/*.js src/**/*.jsx --fix",
+    "lint": "eslint ./src/**/*.ts ./src/**/*.tsx --fix",
     "prettier": "prettier --write .",
     "test": "jest",
     "test:coverage": "jest --collect-coverage",

@@ -5,8 +5,12 @@ import {appReducer} from '../reducers/app-reducer';
 import PropTypes from 'prop-types';
 import AppContextType from '../types/store/app-context-type';
 import AppStoreType from '../types/store/app-store-type';
+import {actionType} from '../types/actions/common';
+import {Dispatch} from 'react';
 const AppStateContext = React.createContext<AppStoreType | null>(null);
-const AppDispatchContext = React.createContext<object | null>(null);
+const AppDispatchContext = React.createContext<Dispatch<actionType> | null>(
+  null,
+);
 
 const lazyInitState = () => appInitialState;
 
@@ -34,7 +38,7 @@ function useAppStateContext(): AppStoreType | null {
   return appContext;
 }
 
-function useAppDispatchContext() {
+function useAppDispatchContext(): Dispatch<actionType> | null {
   const appDispatch = React.useContext(AppDispatchContext);
   if (appDispatch === undefined) {
     throw new Error(

@@ -1,7 +1,11 @@
 import React from 'react';
 import '../soft-bastion-ui/src/styles/main.scss';
 
-const ThemeWrapper = ({children}) => {
+type ThemeWrapperType = {
+  children: React.ReactNode;
+};
+
+const ThemeWrapper = ({children}: ThemeWrapperType): JSX.Element => {
   return <div>{children}</div>;
 };
 

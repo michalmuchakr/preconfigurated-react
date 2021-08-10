@@ -30,18 +30,20 @@ const SET_ERROR = (
   error,
 });
 
-export const appReducer = (
+const appReducer = (
   state: AppStoreType,
   action: {
     type: (state: AppStoreType, b: unknown) => never;
   },
-) => {
+): AppStoreType => {
   if (typeof action.type === 'function') {
     return action.type(state, action);
   }
 
   return state;
 };
+
+export {appReducer};
 
 export default {
   SET_HEROES,

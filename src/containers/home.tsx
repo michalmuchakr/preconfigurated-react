@@ -7,7 +7,7 @@ import HomePageContent from '../components/home-page/home-page-content';
  * @module app-container/home-page
  * @return {ReactElement}
  */
-const Home = () => (
+const Home = (): JSX.Element => (
   <ContainerWrapper
     pageTitle="Home Page"
     pageDescription="Home Page"

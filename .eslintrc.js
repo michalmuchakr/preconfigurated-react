@@ -30,4 +30,9 @@ module.exports = {
       version: 'detect',
     },
   },
+  overrides: [
+    {
+      files: ['src/*.ts', 'src/*.tsx'],
+    },
+  ],
 };

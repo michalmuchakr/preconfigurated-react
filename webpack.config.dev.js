@@ -42,10 +42,15 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        loader: 'css-loader',
-        options: {
-          url: true,
-        },
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -98,7 +103,7 @@ module.exports = {
     open: true,
     port: 1234,
     hot: true,
-    watchContentBase: true,
+    watchFiles: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.scss'],
   },
   plugins: [htmlPlugin],
 };

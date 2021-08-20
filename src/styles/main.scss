@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import '~bootstrap/scss/bootstrap';
-@import './reset.scss';
+@import "~bootstrap/scss/bootstrap";
+@import 'reset';
 @import 'animate';
 @import 'defaults';
 @import 'fonts';
+@import 'forms';
 @import 'nav';
 @import 'footer';
+@import 'pages';
 
 * {
   box-sizing: border-box;

@@ -1,14 +1,5 @@
 import * as React from 'react';
-import {
-  Collapse,
-  Button,
-  ButtonGroup,
-  CardBody,
-  CardText,
-  CardHeader,
-  Card,
-  Input,
-} from 'reactstrap';
+import {Accordion, Button, ButtonGroup, Card, Form} from 'react-bootstrap';
 import 'draft-js/dist/Draft.css';
 import HeroItemType from '../../types/hero/hero-item-type';
 
@@ -38,9 +29,6 @@ export const HeroItem = ({
     setHeroDescription(e.target.value);
   }
 
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-
   function editHeroOnClick(e: React.MouseEvent<HTMLElement>) {
     e.stopPropagation();
     setIsUnderEdition(!isUnderEdition);
@@ -48,46 +36,48 @@ export const HeroItem = ({
 
   return (
     <Card className={`${animateClassname} mb-2`}>
-      <CardHeader
-        className="d-flex align-items-center justify-content-between"
-        onClick={toggle}
-      >
-        {isUnderEdition ? (
-          <Input
-            className="hero-name__input"
-            type="text"
-            name={`hero-name__${id}`}
-            value={heroFirstName}
-            onClick={preventPanelToggle}
-            onChange={editHeroName}
-          />
-        ) : (
-          <span className="hero-name__text">{heroFirstName}</span>
-        )}
+      <Accordion>
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>
+            {isUnderEdition ? (
+              <Form.Control
+                className="hero-name__input"
+                type="text"
+                name={`hero-name__${id}`}
+                value={heroFirstName}
+                onClick={preventPanelToggle}
+                onChange={editHeroName}
+              />
+            ) : (
+              <span className="hero-name__text">{heroFirstName}</span>
+            )}
 
-        <ButtonGroup size="sm">
-          <Button outline onClick={editHeroOnClick}>
-            {isUnderEdition ? 'save' : 'edit'}
-          </Button>
-        </ButtonGroup>
-      </CardHeader>
-      <Collapse isOpen={isOpen}>
-        <CardBody className="hero__card-body">
-          {isUnderEdition ? (
-            <Input
-              type="textarea"
-              name="text"
-              id="exampleText"
-              value={heroDescription}
-              onClick={preventPanelToggle}
-              onChange={editHeroDescriptionOnClick}
-              className="hero__text-area"
-            />
-          ) : (
-            <CardText className="hero__card-text">{heroDescription}</CardText>
-          )}
-        </CardBody>
-      </Collapse>
+            <ButtonGroup size="sm" className="edit-save__btn">
+              <Button onClick={editHeroOnClick}>
+                {isUnderEdition ? 'save' : 'edit'}
+              </Button>
+            </ButtonGroup>
+          </Accordion.Header>
+
+          <Accordion.Body>
+            {isUnderEdition ? (
+              <Form.Control
+                type="textarea"
+                name="text"
+                id="exampleText"
+                value={heroDescription}
+                onClick={preventPanelToggle}
+                onChange={editHeroDescriptionOnClick}
+                className="hero__text-area"
+              />
+            ) : (
+              <Card.Text className="hero__card-text">
+                {heroDescription}
+              </Card.Text>
+            )}
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </Card>
   );
 };

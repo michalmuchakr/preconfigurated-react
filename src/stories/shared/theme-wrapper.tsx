@@ -1,5 +1,4 @@
 import React from 'react';
-import '../soft-bastion-ui/src/styles/main.scss';
 
 type ThemeWrapperType = {
   children: React.ReactNode;

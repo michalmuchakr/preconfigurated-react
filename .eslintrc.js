@@ -1,11 +1,11 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
-    es2020: true,
+    es6: true,
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
     'prettier',
@@ -14,7 +14,6 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -22,14 +21,7 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  plugins: [
-    'eslint-plugin-react',
-    'eslint-plugin-react-hooks',
-    'jest',
-    'prettier',
-    'react',
-  ],
-  root: true,
+  plugins: ['react', 'prettier', '@typescript-eslint', 'jest'],
   rules: {
     'prettier/prettier': 'error',
   },
@@ -38,17 +30,4 @@ module.exports = {
       version: 'detect',
     },
   },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      parser: '@typescript-eslint/parser',
-      plugins: [
-        'eslint-plugin-react',
-        'eslint-plugin-react-hooks',
-        '@typescript-eslint',
-        '@typescript-eslint/eslint-plugin',
-        'plugin:@typescript-eslint/recommended',
-      ],
-    },
-  ],
 };

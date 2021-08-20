@@ -41,8 +41,9 @@ Then navigate to url using your browser of your choise:
     <li>TypeScript</li>
     <li>React</li>
     <li>SCSS</li>
-    <li>ReactStrap</li>
+    <li>React - bootstrap</li>
     <li>React Helmet</li>
+    <li>Axios</li>
     <li>Huskey</li>
     <li>Prettier EsLint</li>
 </ul>

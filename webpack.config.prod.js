@@ -15,14 +15,10 @@ const webAssetManifest = new WebpackAssetsManifest({
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    filename: '[name]-[chunkhash].js',
-    chunkFilename: '[name]-[id]-[chunkhash].js',
+    filename: '[name].js',
+    chunkFilename: '[name]-[id].js',
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  optimization: {},
   resolve: {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
     alias: {
@@ -70,21 +66,11 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|woff|woff2|svg)$/i,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/',
-          },
-        },
+        type: 'asset/resource',
       },
       {
         test: /\.(jpe?g|png|gif|ico)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+        type: 'asset/resource',
       },
     ],
   },

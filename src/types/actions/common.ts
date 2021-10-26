@@ -7,12 +7,12 @@ type setLoadingActionType = {
   type: (
     state: AppStoreType,
     {isLoading, loadingID}: setLoadingPropType,
-  ) => AppStoreType;
+  ) => void;
 };
 
 type setErrorActionType = {
   error: string | null;
-  type: (state: AppStoreType, {error}: setErrorPropType) => AppStoreType;
+  type: (state: AppStoreType, {error}: setErrorPropType) => void;
 };
 
 type actionType = setLoadingActionType | setErrorActionType | unknown;

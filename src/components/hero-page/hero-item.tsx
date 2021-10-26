@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {Accordion, Button, ButtonGroup, Card, Form} from 'react-bootstrap';
-import 'draft-js/dist/Draft.css';
 import HeroItemType from '../../types/hero/hero-item-type';
 
 export const HeroItem = ({

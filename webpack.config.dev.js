@@ -73,26 +73,12 @@ module.exports = {
       {
         test: /\.(ttf|eot|woff|woff2|svg)$/i,
         include: path.resolve(__dirname, './src/assets/'),
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/',
-          },
-        },
+        type: 'asset/resource',
       },
       {
         test: /\.(jpe?g|png|gif|ico)$/i,
         include: path.resolve(__dirname, './src/assets/'),
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/img/',
-            },
-          },
-        ],
+        type: 'asset/resource',
       },
     ],
   },

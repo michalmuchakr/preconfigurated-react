@@ -5,9 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <h4>
-  Please see app live: 
-  <a href="https://preconfigurated-react.herokuapp.com/">
-    preconfigured-react on herokuapp
+  Please see app live deployed:
+  <a href="https://preconfigurated-react.netlify.app/">
+    preconfigured-react on netlify
   </a>
 </h4>
 

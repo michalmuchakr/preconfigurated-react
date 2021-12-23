@@ -1,13 +1,15 @@
 import AppStoreType from '../types/store/app-store-type';
 import {
-  setErrorPropType,
-  setHeroPropType,
-  setLoadingPropType,
+  setErrorPropShape,
+  setHeroPropShape,
+  setLoadingPropShape,
 } from '../types/reducers/reducer-types';
+
+import {actionPayloadType} from '../types/actions/common';
 
 const SET_HEROES = (
   state: AppStoreType,
-  {heroData}: setHeroPropType,
+  {heroData}: setHeroPropShape,
 ): AppStoreType => ({
   ...state,
   heroData,
@@ -15,7 +17,7 @@ const SET_HEROES = (
 
 const SET_LOADING = (
   state: AppStoreType,
-  {isLoading, loadingID}: setLoadingPropType,
+  {isLoading, loadingID}: setLoadingPropShape,
 ): AppStoreType => ({
   ...state,
   isLoading,
@@ -24,7 +26,7 @@ const SET_LOADING = (
 
 const SET_ERROR = (
   state: AppStoreType,
-  {error}: setErrorPropType,
+  {error}: setErrorPropShape,
 ): AppStoreType => ({
   ...state,
   error,
@@ -33,7 +35,7 @@ const SET_ERROR = (
 const appReducer = (
   state: AppStoreType,
   action: {
-    type: (state: AppStoreType, b: unknown) => never;
+    type: (state: AppStoreType, actionPayload: any) => AppStoreType;
   },
 ): AppStoreType => {
   if (typeof action.type === 'function') {

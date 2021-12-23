@@ -3,7 +3,7 @@ import {getHeroes} from '../actions/heros-actions';
 import {useAppDispatchContext} from '../store/app-context';
 import ContainerWrapper from './container-wrapper';
 import HeroPageContent from '../components/hero-page/hero-page-content';
-import {actionType} from '../types/actions/common';
+import {actionObjectShape} from '../types/actions/common';
 import {Dispatch} from 'react';
 
 /**
@@ -12,7 +12,8 @@ import {Dispatch} from 'react';
  * @return {ReactNode} <HeroPage />
  */
 const HeroPage = (): JSX.Element => {
-  const appDispatch: Dispatch<actionType> | null = useAppDispatchContext();
+  const appDispatch: Dispatch<actionObjectShape> | null =
+    useAppDispatchContext();
 
   React.useEffect(() => {
     getHeroes(appDispatch);

@@ -1,16 +1,16 @@
 import HeroItemType from '../hero/hero-item-type';
 
-type setHeroPropType = {
+type setHeroPropShape = {
   heroData: HeroItemType[];
 };
 
-type setLoadingPropType = {
+type setLoadingPropShape = {
   isLoading: boolean;
   loadingID: string;
 };
 
-type setErrorPropType = {
+type setErrorPropShape = {
   error: string;
 };
 
-export {setErrorPropType, setHeroPropType, setLoadingPropType};
+export {setErrorPropShape, setHeroPropShape, setLoadingPropShape};

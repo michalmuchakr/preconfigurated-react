@@ -1,25 +1,18 @@
-import * as React from 'react';
+import {createContext, useContext, useReducer} from 'react';
 
 import appInitialState from './app-global-store';
 import {appReducer} from '../reducers/app-reducer';
-import PropTypes from 'prop-types';
 import AppContextType from '../types/store/app-context-type';
 import AppStoreType from '../types/store/app-store-type';
-import {actionType} from '../types/actions/common';
+import {actionObjectShape} from '../types/actions/common';
 import {Dispatch} from 'react';
-const AppStateContext = React.createContext<AppStoreType | null>(null);
-const AppDispatchContext = React.createContext<Dispatch<actionType> | null>(
+const AppStateContext = createContext<AppStoreType | null>(null);
+const AppDispatchContext = createContext<Dispatch<actionObjectShape> | null>(
   null,
 );
 
-const lazyInitState = () => appInitialState;
-
 const AppContext = ({children}: AppContextType): JSX.Element => {
-  const [appState, appDispatch] = React.useReducer(
-    appReducer,
-    appInitialState,
-    lazyInitState,
-  );
+  const [appState, appDispatch] = useReducer(appReducer, appInitialState);
 
   return (
     <AppStateContext.Provider value={appState}>
@@ -31,15 +24,15 @@ const AppContext = ({children}: AppContextType): JSX.Element => {
 };
 
 function useAppStateContext(): AppStoreType | null {
-  const appContext = React.useContext(AppStateContext);
+  const appContext = useContext(AppStateContext);
   if (appContext === undefined) {
     throw new Error('useAppStateContext must be used within a CountProvider');
   }
   return appContext;
 }
 
-function useAppDispatchContext(): Dispatch<actionType> | null {
-  const appDispatch = React.useContext(AppDispatchContext);
+function useAppDispatchContext(): Dispatch<actionObjectShape> | null {
+  const appDispatch = useContext(AppDispatchContext);
   if (appDispatch === undefined) {
     throw new Error(
       'useAppDispatchContext must be used within a CountProvider',
@@ -47,10 +40,6 @@ function useAppDispatchContext(): Dispatch<actionType> | null {
   }
   return appDispatch;
 }
-
-AppContext.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export {useAppStateContext, useAppDispatchContext};
 export default AppContext;

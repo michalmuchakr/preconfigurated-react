@@ -1,10 +1,9 @@
 import * as React from 'react';
 import {useAppStateContext} from '../../store/app-context';
 import {HeroItem} from './hero-item';
-import HeroItemType from '../../types/hero/hero-item-type';
 
-const HeroList = (): JSX.Element => {
-  const {heroData, isLoading, loadingID} = {...useAppStateContext()};
+const HeroList = () => {
+  const {heroData, isLoading, loadingID} = useAppStateContext();
 
   return (
     <ul className="hero-page__list mb-4">
@@ -12,7 +11,7 @@ const HeroList = (): JSX.Element => {
         <span>loading...</span>
       )}
       {heroData &&
-        heroData.map((hero: HeroItemType, index: number) => (
+        heroData.map((hero, index) => (
           <HeroItem
             id={hero.id}
             description={hero.description}

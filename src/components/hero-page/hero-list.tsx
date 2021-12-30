@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useAppStateContext} from '../../store/app-context';
-import {HeroItem} from './hero-item';
+import {HeroItem} from './hero-item/hero-item';
 
 const HeroList = () => {
   const {heroData, isLoading, loadingID} = useAppStateContext();

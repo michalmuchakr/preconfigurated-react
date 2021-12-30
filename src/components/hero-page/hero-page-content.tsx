@@ -1,9 +1,10 @@
 import * as React from 'react';
 import HeroList from './hero-list';
+import PageTitle from '../shared/page-title';
 
 const HeroPageContent = (): JSX.Element => (
   <div className="hero-page page">
-    <h1 className="mt-4 mb-3">Hero Page</h1>
+    <PageTitle pageTitle="Hero list page" />
     <HeroList />
   </div>
 );

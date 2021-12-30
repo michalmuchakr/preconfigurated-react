@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Accordion, Button, ButtonGroup, Card, Form} from 'react-bootstrap';
-import HeroItemType from '../../types/hero/hero-item-type';
+import HeroItemType from '../../../types/hero/hero-item-type';
 
 export const HeroItem = ({
   id,

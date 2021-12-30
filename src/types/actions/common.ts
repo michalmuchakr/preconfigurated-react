@@ -21,13 +21,8 @@ type setErrorActionType = (
   {error}: setErrorPropShape,
 ) => AppStoreType;
 
-type actionType =
-  | setLoadingActionType
-  | setErrorActionType
-  | saveHeroesActionType;
-
 type saveHeroesActionObjectShape = {
-  type: actionType;
+  type: saveHeroesActionType;
   heroData: HeroItemType[];
 };
 
@@ -38,11 +33,14 @@ type setLoadingActionObjectShape = {
 };
 
 type setErrorActionObjectShape = {
-  type: actionType;
+  type: setErrorActionType;
   error: string | null;
 };
 
-type actionPayloadType = setErrorPropShape | setLoadingPropShape;
+type actionPayloadType =
+  | setErrorPropShape
+  | setLoadingPropShape
+  | setHeroPropShape;
 
 type actionObjectShape =
   | setLoadingActionObjectShape
@@ -52,7 +50,6 @@ type actionObjectShape =
 export {
   actionPayloadType,
   actionObjectShape,
-  actionType,
   saveHeroesActionObjectShape,
   setErrorActionObjectShape,
   setLoadingActionObjectShape,

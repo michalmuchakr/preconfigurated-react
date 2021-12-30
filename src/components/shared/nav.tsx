@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 import {useAppStateContext} from '../../store/app-context';
 
 const Nav = (): JSX.Element => {
-  const {userAuthenticated} = {...useAppStateContext()};
+  const {userAuthenticated} = useAppStateContext();
 
   return (
     <nav className="navigation">

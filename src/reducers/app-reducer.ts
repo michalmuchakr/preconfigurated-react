@@ -5,8 +5,6 @@ import {
   setLoadingPropShape,
 } from '../types/reducers/reducer-types';
 
-import {actionPayloadType} from '../types/actions/common';
-
 const SET_HEROES = (
   state: AppStoreType,
   {heroData}: setHeroPropShape,

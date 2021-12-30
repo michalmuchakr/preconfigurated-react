@@ -6,7 +6,7 @@ import AppContextType from '../types/store/app-context-type';
 import AppStoreType from '../types/store/app-store-type';
 import {actionObjectShape} from '../types/actions/common';
 import {Dispatch} from 'react';
-const AppStateContext = createContext<AppStoreType | null>(null);
+const AppStateContext = createContext<AppStoreType>(appInitialState);
 const AppDispatchContext = createContext<Dispatch<actionObjectShape> | null>(
   null,
 );
@@ -23,7 +23,7 @@ const AppContext = ({children}: AppContextType): JSX.Element => {
   );
 };
 
-function useAppStateContext(): AppStoreType | null {
+function useAppStateContext(): AppStoreType {
   const appContext = useContext(AppStateContext);
   if (appContext === undefined) {
     throw new Error('useAppStateContext must be used within a CountProvider');

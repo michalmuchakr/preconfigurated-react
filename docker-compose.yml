@@ -1,0 +1,14 @@
+version: '1.0'
+
+services:
+  builder:
+    image: generalcube/preconfigurated-react:rc01
+    build:
+      dockerfile: Dockerfile-build
+      context: .
+  deployer:
+    depends_on:
+      - builder
+    build:
+      dockerfile: Dockerfile-deploy
+      context: .

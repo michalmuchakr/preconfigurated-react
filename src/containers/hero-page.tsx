@@ -16,7 +16,7 @@ const HeroPage = (): JSX.Element => {
     useAppDispatchContext();
 
   React.useEffect(() => {
-    getHeroes(appDispatch);
+    getHeroes(appDispatch, 'qweqweqweqwe');
   }, [appDispatch]);
 
   return (

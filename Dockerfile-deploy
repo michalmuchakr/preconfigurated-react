@@ -1,0 +1,3 @@
+FROM preconfigurated-react-pre-build
+
+COPY build/ /usr/share/nginx/html

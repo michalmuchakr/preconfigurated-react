@@ -33,7 +33,7 @@ const SET_ERROR = (
 const appReducer = (
   state: AppStoreType,
   action: {
-    type: (state: AppStoreType, actionPayload: any) => AppStoreType;
+    type: (state: AppStoreType, actionPayload: object) => AppStoreType;
   },
 ): AppStoreType => {
   if (typeof action.type === 'function') {

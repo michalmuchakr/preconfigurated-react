@@ -16,16 +16,23 @@ const setError = (error: string) => ({
   error,
 });
 
-const fetchHeroes = async () => {
-  const res = await axios.get('/api/heroes');
+const fetchHeroes = async (accessToken: string) => {
+  const res = await axios.get('/api/heroes', {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
   return res.data;
 };
 
-const getHeroes = (appDispatch: Dispatch<actionObjectShape> | null) => {
+const getHeroes = (
+  appDispatch: Dispatch<actionObjectShape> | null,
+  accessToken: string,
+) => {
   if (appDispatch) {
     appDispatch(setLoading(true, 'heroList'));
 
-    fetchHeroes()
+    fetchHeroes(accessToken)
       .then((heroData) => {
         appDispatch(saveHeroes(heroData));
       })

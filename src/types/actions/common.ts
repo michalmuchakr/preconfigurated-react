@@ -1,10 +1,10 @@
 import AppStoreType from '../store/app-store-type';
+import HeroItemType from '../hero/hero-item-type';
 import {
   setErrorPropShape,
   setHeroPropShape,
   setLoadingPropShape,
 } from '../reducers/reducer-types';
-import HeroItemType from '../hero/hero-item-type';
 
 type setLoadingActionType = (
   state: AppStoreType,
@@ -37,20 +37,9 @@ type setErrorActionObjectShape = {
   error: string | null;
 };
 
-type actionPayloadType =
-  | setErrorPropShape
-  | setLoadingPropShape
-  | setHeroPropShape;
-
 type actionObjectShape =
   | setLoadingActionObjectShape
   | setErrorActionObjectShape
   | saveHeroesActionObjectShape;
 
-export {
-  actionPayloadType,
-  actionObjectShape,
-  saveHeroesActionObjectShape,
-  setErrorActionObjectShape,
-  setLoadingActionObjectShape,
-};
+export {actionObjectShape};

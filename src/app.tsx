@@ -1,5 +1,4 @@
-import * as React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Nav from './components/shared/nav';
 import Footer from './components/shared/footer';
@@ -11,10 +10,10 @@ const App = (): JSX.Element => (
     <div className="app">
       <Nav />
       <div className="app-container">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/hero-page" component={HeroPage} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/hero-page" element={<HeroPage />} />
+        </Routes>
       </div>
       <Footer />
     </div>
